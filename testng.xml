@@ -1,0 +1,13 @@
+<suite name="Book Shopping Workflow Suite">
+	<listeners>
+		<listener class-name="listeners.TestListener" />
+	</listeners>
+    <test name="End to End Flow">
+    <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="testcases.TestHealthInsurance"/>
+
+        </classes>
+    </test>
+
+</suite>
