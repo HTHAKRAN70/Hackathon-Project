@@ -28,9 +28,6 @@ public class HomePage {
     	return driver.findElement(By.xpath("//button[normalize-space()='Get Started']"));
     	
     }
-    
-    
-    
-    
+
 
 }

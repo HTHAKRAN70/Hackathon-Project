@@ -14,8 +14,7 @@ public class AgePage {
 	WebDriverWait wait;
 	public AgePage(WebDriver driver) {
 		this.driver=driver;
-	    this.wait=new WebDriverWait(driver,Duration.ofSeconds(20));
-		
+	    this.wait=new WebDriverWait(driver,Duration.ofSeconds(20));		
 	}
 	public void SelectAge(String YourAge,String SpouseAge,String DaughterAge,String sonAge, String fatherAge, String MotherAge) throws InterruptedException {
 		WebElement you;
@@ -40,40 +39,41 @@ public class AgePage {
 			select.selectByValue(age);
 		}
 		String[] daugtherAges=DaughterAge.split(",");
-		if(Integer.parseInt(daugtherAges[0])>0) {
+		if((int)(daugtherAges[0].charAt(0)-'0')>0) {
 			if(daugtherAges.length>1) {
 				for(int i=0;i<daugtherAges.length;i++) {
 					String daughterid="Age-Daughter-"+String.valueOf(i+1);
 					
 					Daughter=driver.findElement(By.id(daughterid));
 					Select select=new Select(Daughter);
-					String age=daugtherAges[i]+"y";
+					String age=daugtherAges[i].substring(0,daugtherAges[i].length()-1)+daugtherAges[i].charAt(daugtherAges[0].length()-1)+"";
+					
 					select.selectByValue(age);
 				}
 				
 			}else {
 				Daughter=driver.findElement(By.id("Age-Daughter"));
 				Select select=new Select(Daughter);
-				String age=daugtherAges[0]+"y";
+				String age=daugtherAges[0].substring(0,daugtherAges[0].length()-1)+daugtherAges[0].charAt(daugtherAges[0].length()-1)+"";
 				select.selectByValue(age);
 			}
 		}
 		
 		String[] sonAges=sonAge.split(",");
-		if(Integer.parseInt(sonAges[0])>0) {
+		if((int)(sonAges[0].charAt(0)-'0')>0) {
 			if(sonAges.length>1) {
 				for(int i=0;i<sonAges.length;i++) {
 					String sonid="Age-Son-"+String.valueOf(i);
 					Son=driver.findElement(By.id(sonid));
 					Select select=new Select(Son);
-					String age=sonAges[i]+"y";
+					String age=sonAges[i].substring(0,sonAges[i].length()-1)+sonAges[i].charAt(sonAges[i].length()-1)+"";
 					select.selectByValue(age);
 				}
 				
 			}else {
 				Son=driver.findElement(By.id("Age-Son"));
 				Select select=new Select(Son);
-				String age=sonAges[0]+"y";
+				String age=sonAges[0].substring(0,sonAges[0].length()-1)+sonAges[0].charAt(sonAges[0].length()-1)+"";
 				select.selectByValue(age);
 			}
 		}
@@ -90,8 +90,20 @@ public class AgePage {
 			select.selectByValue(age);
 		}
 	}
+	
 	public WebElement getNextButton() {
 		return driver.findElement(By.xpath("//div[@class='next-btn']"));
 	}
-
+	
+	public String getErrorMessage() {
+	    try {
+	        WebElement ele = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(
+	                By.xpath("//div[contains(@class,'ve--error')]"))
+	        );
+	        return ele.getText();
+	    } catch (Exception e) {
+	        return "";
+	    }
+	}
 }

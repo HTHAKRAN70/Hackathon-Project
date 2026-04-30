@@ -3,40 +3,31 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
-import config.ConfigReader; 
+import config.ConfigReader;
 
 public class BaseTest extends BasePage {
-    
+
     protected WebDriver driver;
-    
-    // Page Objects Reference
- 
-    @Parameters({"browser"})
-    @BeforeTest
-    public void setUp(String browserName) {
-        
-        // Use static ConfigReader if XML parameter is missing
-        if (browserName == null || browserName.isEmpty()) {
-            browserName = ConfigReader.getProperty("browser");
-        }
-        
-        // Initialize driver via BasePage logic
-        this.driver = setupDriver(browserName); 
-        
+
+    @BeforeMethod
+    public void setUp() {
+
+        String browserName = ConfigReader.getProperty("browser");
+
+        driver = setupDriver(browserName);
+
         int timeout = Integer.parseInt(ConfigReader.getProperty("timeout"));
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(timeout));
-        
         driver.manage().window().maximize();
         driver.get(ConfigReader.getProperty("url"));
-        
     }
-    @AfterTest
+
+    @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();

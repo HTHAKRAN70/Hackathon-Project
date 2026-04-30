@@ -1,7 +1,6 @@
-<suite name="Book Shopping Workflow Suite">
-	<listeners>
-		<listener class-name="listeners.TestListener" />
-	</listeners>
+<?xml version="1.0" encoding ="UTF-8"?>
+<suite name="Book Shopping Workflow Suite" >
+
     <test name="End to End Flow">
     <parameter name="browser" value="chrome" />
         <classes>

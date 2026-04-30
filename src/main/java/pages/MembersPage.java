@@ -62,6 +62,17 @@ public class MembersPage {
     public WebElement getNextButton() {
     	return driver.findElement(By.xpath("(//div[@class='next-btn'])[1]"));
     }
+    public String getErrorMessage() {
+    	try {
+	        WebElement ele = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(
+	                By.xpath("//div[@class='sel-error']"))
+	        );
+	        return ele.getText();
+	    } catch (Exception e) {
+	        return "";
+	    }
+    }
     
    
     

@@ -2,12 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Book Shopping Workflow Suite]">
   <test thread-count="5" name="End to End Flow(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testcases.TestHealthInsurance">
         <methods>
           <include name="setUp"/>
-          <include name="testHealthInsurance"/>
           <include name="tearDown"/>
+          <include name="testHealthInsurance"/>
+          <include name="testCoupleChildrenAgeGapLess18"/>
           <include name="initPages"/>
         </methods>
       </class> <!-- testcases.TestHealthInsurance -->

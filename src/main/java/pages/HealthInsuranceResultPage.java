@@ -1,150 +1,3 @@
-//package pages;
-//
-//import java.time.Duration;
-//import java.util.List;
-//
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.JavascriptExecutor;
-//import org.openqa.selenium.StaleElementReferenceException;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.openqa.selenium.support.ui.WebDriverWait;
-//
-//public class HealthInsuranceResultPage {
-//
-//    private WebDriver driver;
-//    private WebDriverWait wait;
-//
-//    
-//    private final By resultCountText =
-//            By.xpath("//div[contains(text(),'matching Health Insurance Plans')]");
-//
-//    private final By planDetailButtons =
-//            By.className("pd-btn");
-//
-//    private final By insurerName =
-//            By.xpath("//div[contains(@class,'pdh-insurer')]");
-//
-//    private final By planName =
-//            By.className("pdh-name");
-//
-//
-//    public HealthInsuranceResultPage(WebDriver driver) {
-//        this.driver = driver;
-//        this.wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-//        this.wait.ignoring(StaleElementReferenceException.class);
-//    }
-//
-//    
-//    public int getNumberOfResults() {
-//
-//        WebElement resultEle = wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(resultCountText)
-//        );
-//
-//        int previous = -1;
-//        int current = 0;
-//
-//        for (int i = 0; i < 5; i++) {
-//            current = extractResultCount(resultEle);
-//
-//            if (current == previous) {
-//                return current; // ✅ stabilized
-//            }
-//            previous = current;
-//            sleep(1000);
-//        }
-//        return current;
-//    }
-//
-//    
-//    public void fetchAllPlanDetails() throws InterruptedException {
-//
-//        // ✅ Ensure API loading is COMPLETE
-//        getNumberOfResults();
-//
-//        wait.until(
-//                ExpectedConditions.numberOfElementsToBeMoreThan(planDetailButtons, 0)
-//        );
-//
-//        int totalPlans = driver.findElements(planDetailButtons).size();
-//        System.out.println("->>>>>>"+totalPlans);
-//        for (int index = 0; index < totalPlans; index++) {
-//
-//            // ✅ ALWAYS re-locate elements after navigation
-//        	Thread.sleep(4000);
-//        	List<WebElement> buttons =
-//                    driver.findElements(planDetailButtons);
-////            System.out.println("size---"+buttons.size()); 
-//            
-//            WebElement detailsBtn = buttons.get(index);
-//
-//            scrollIntoView(detailsBtn);
-//
-//            wait.until(ExpectedConditions.elementToBeClickable(detailsBtn))
-//                    .click();
-//
-//            wait.until(
-//                    ExpectedConditions.visibilityOfElementLocated(planName)
-//            );
-//            fetchPlanDetails();
-//            driver.navigate().back();
-//            wait.until(
-//                    ExpectedConditions.numberOfElementsToBeMoreThan(
-//                            planDetailButtons, 0
-//                    )
-//            );
-//        }
-//    }
-//
-//    private void fetchPlanDetails() {
-//
-//        WebElement insurer = wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(insurerName)
-//        );
-//
-//        WebElement plan = driver.findElement(planName);
-//     // Locate numeric value
-//        WebElement priceValueEle = driver.findElement(
-//                By.cssSelector("div.pdh-buy-amt div.rupee-val")
-//        );
-//
-//        String priceValue = priceValueEle.getText().trim();
-//        String fullPrice = "₹" + priceValue + " /yr";
-//        System.out.println(fullPrice);
-//        WebElement sumAssuredEle = driver.findElement(
-//                By.cssSelector("div.pdh-sa-val div.rupee-val")
-//        );
-//        String sumAssuredValue = sumAssuredEle.getText().trim(); 
-//        String sumAssuredText = "₹" + sumAssuredValue;
-//        System.out.println("Sum Assured: " + sumAssuredText);
-//        	
-//        System.out.println("================================");
-//        System.out.println("Insurance Provider : " + insurer.getText());
-//        System.out.println("Plan Name          : " + plan.getText());
-//        System.out.println("================================");
-//    }
-//    
-//    private int extractResultCount(WebElement resultElement) {
-//        return Integer.parseInt(resultElement.getText().split(" ")[0]);
-//    }
-//
-//    private void scrollIntoView(WebElement element) {
-//        ((JavascriptExecutor) driver).executeScript(
-//                "arguments[0].scrollIntoView({block:'center'});", element
-//        );
-//    }
-//    
-//    
-//    private void sleep(long millis) {
-//        try {
-//            Thread.sleep(millis);
-//        } catch (InterruptedException e) {
-//            Thread.currentThread().interrupt();
-//        }
-//    }
-//}
 package pages;
 
 import java.time.Duration;
@@ -203,7 +56,8 @@ public class HealthInsuranceResultPage {
         return current;
     }
 
-    // ✅ MAIN METHOD – RETURNS 2D LIST
+    
+    
     public List<List<String>> fetchAllPlanDetails() throws InterruptedException {
 
         List<List<String>> allPlansData = new ArrayList<>();
@@ -232,6 +86,7 @@ public class HealthInsuranceResultPage {
             allPlansData.add(singlePlanData);
 
             driver.navigate().back();
+            if(index==totalPlans-1)break;
             wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(planDetailButtons, 0));
         }
 
@@ -255,8 +110,6 @@ public class HealthInsuranceResultPage {
                 By.cssSelector("div.pdh-sa-val div.rupee-val")
         ).getText().trim();
         String sumAssured = "₹" + sumAssuredValue;
-
-        // Order matters!
         planData.add(insurerText);
         planData.add(planText);
         planData.add(pricePerYear);
@@ -277,5 +130,11 @@ public class HealthInsuranceResultPage {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
+    }
+    public WebElement getViewMemberDetailsButton() {
+    	return driver.findElement(By.xpath("//div[@class='mb__action-box']"));
+    }
+    public WebElement getEditDetailsButton() {
+    	return driver.findElement(By.xpath("//button[normalize-space()='Edit Details']"));
     }
 }
