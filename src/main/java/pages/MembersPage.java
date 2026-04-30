@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,13 +20,27 @@ public class MembersPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     
-    public void SelectMembers(Boolean You,Boolean partner,Boolean daughter, Boolean Son, Boolean father, Boolean Mother, int noOfSon, int noOfDaughter) {
-    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Select your gender']")));
+    public void SelectMembers(Boolean You,Boolean partner,Boolean daughter, Boolean Son, Boolean father, Boolean Mother, int noOfSon, int noOfDaughter) throws InterruptedException {
     	if(You) {
-    		driver.findElement(By.xpath("//div[@class='ms-option'][1]")).click();
+    		WebElement youBtn = driver.findElement(By.xpath("//div[contains(@class,'ms-option')][1]"));
+
+    		if (!youBtn.getAttribute("class").contains("selected")) {
+    		    youBtn.click(); 
+    		}
+
+    	}else {
+    		WebElement youBtn = driver.findElement(By.xpath("//div[contains(@class,'ms-option')][1]"));
+    		if (youBtn.getAttribute("class").contains("selected")) {
+    			youBtn.click(); 
+    		}
     	}
     	if(partner) {
-    		driver.findElement(By.xpath("(//div[@class='ms-option'])[2]")).click();
+    		System.out.println("----------");
+    		driver.findElement(By.xpath("(//div[contains(@class,'ms-option')][2])")).click();
+//    		for(WebElement elem:ele) {
+//    			elem.click();
+//    			System.out.println(elem.getText()+" "+elem.getAttribute("class"));
+//    		}
     		
     	}
     	if(You||partner) {

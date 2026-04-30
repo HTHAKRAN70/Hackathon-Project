@@ -6,8 +6,8 @@
       <class name="testcases.TestHealthInsurance">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="testHealthInsurance"/>
+          <include name="tearDown"/>
           <include name="initPages"/>
         </methods>
       </class> <!-- testcases.TestHealthInsurance -->

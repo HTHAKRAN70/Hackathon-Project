@@ -28,5 +28,8 @@ public class AddressPage {
 	public WebElement getContinueButton() {
 		return driver.findElement(By.xpath("//div[@class='next-btn']"));
 	}
+	public String getErrorMssg() {
+		return driver.findElement(By.xpath("//div[contains(@class,'error-ui')]")).getText();
+	}
 
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
@@ -19,6 +20,7 @@ public class HomePage {
         
     }
     public WebElement getGenderButton(String gender) {
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[normalize-space()='Best Health Insurance plans. Customized for you.']")));
     	return driver.findElement(By.xpath("//div[normalize-space()='"+gender+"']"));
     }
     public WebElement getMobileInputBox() {

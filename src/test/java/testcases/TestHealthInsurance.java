@@ -49,7 +49,7 @@ public class TestHealthInsurance extends BaseTest {
 		member.getNextButton().click();
 		age.SelectAge("25","25","0","4m,4y,4m","70","70");
 		age.getNextButton().click();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		address.getYouPinCodeInput().sendKeys("251201");
 		address.getParentPinCodeInput().sendKeys("251201");
 		address.getMobileNumberInput().sendKeys("7017583580");
@@ -64,11 +64,10 @@ public class TestHealthInsurance extends BaseTest {
 		     System.out.println("Price / Year : " + plan.get(2));
 		     System.out.println("Sum Assured  : " + plan.get(3));
 		 }
-	    Thread.sleep(10000);
 	}
 	@Test
 	public void testCoupleChildrenAgeGapLess18() throws InterruptedException {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[normalize-space()='Best Health Insurance plans. Customized for you.']")));
+		
 		home.getGenderButton("Male").click();
 		try {
 			Thread.sleep(4000);
@@ -85,7 +84,7 @@ public class TestHealthInsurance extends BaseTest {
 	}
 	@Test
 	public void testeditmemberdetailsbutton() throws InterruptedException {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[normalize-space()='Best Health Insurance plans. Customized for you.']")));
+		
 		home.getGenderButton("Male").click();
 		try {
 			Thread.sleep(2000);
@@ -108,9 +107,32 @@ public class TestHealthInsurance extends BaseTest {
 	    softAssert.assertAll();
 		
 	}
+	
 	@Test
-	public void testWithoutSelectingAnyMember() {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[normalize-space()='Best Health Insurance plans. Customized for you.']")));
+	public void testwithoutPinCodePhoneNumber() throws InterruptedException {
+		home.getGenderButton("Male").click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		member.SelectMembers(true,true,false,true,true,true,3,0);
+		member.getNextButton().click();
+		age.SelectAge("25","25","0","4m,4y,4m","70","70");
+		age.getNextButton().click();
+		Thread.sleep(2000);
+		address.getYouPinCodeInput().sendKeys("251201");
+		address.getParentPinCodeInput().sendKeys("");
+		address.getMobileNumberInput().sendKeys("7017583580");
+	    address.getContinueButton().click();
+	    String erroMssg= address.getErrorMssg();
+	    softAssert.assertEquals(erroMssg,"Please enter a valid pincode");
+	    softAssert.assertAll();
+	   
+	}
+	
+	@Test
+	public void testWithoutSelectingAnyMember() throws InterruptedException {
 		home.getGenderButton("Male").click();
 		try {
 			Thread.sleep(2000);
@@ -122,8 +144,6 @@ public class TestHealthInsurance extends BaseTest {
 		String errorMssg=member.getErrorMessage();
 		softAssert.assertEquals(errorMssg,"* Select one or more members to continue");
 	    softAssert.assertAll();
-		
-		
 	}
 	
 }
