@@ -70,8 +70,7 @@ public class HealthInsuranceResultPage {
 
         for (int index = 0; index < totalPlans; index++) {
 
-            // re-locate buttons every iteration
-            Thread.sleep(3000);
+            Thread.sleep(4000);
         	List<WebElement> buttons = driver.findElements(planDetailButtons);
             WebElement detailsBtn = buttons.get(index);
 
@@ -135,6 +134,11 @@ public class HealthInsuranceResultPage {
     	return driver.findElement(By.xpath("//div[@class='mb__action-box']"));
     }
     public WebElement getEditDetailsButton() {
-    	return driver.findElement(By.xpath("//button[normalize-space()='Edit Details']"));
-    }
+
+return wait.until(
+        ExpectedConditions.elementToBeClickable(
+            By.xpath("//button[normalize-space()='Edit Details']")
+        )
+    );
+}
 }

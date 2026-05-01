@@ -3,16 +3,16 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import config.ConfigReader;
 
 public class BaseTest extends BasePage {
 
-    protected WebDriver driver;
+    public  WebDriver driver;
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
 
         String browserName = ConfigReader.getProperty("browser");
@@ -27,7 +27,7 @@ public class BaseTest extends BasePage {
         driver.get(ConfigReader.getProperty("url"));
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown() {
         if (driver != null) {
             driver.quit();

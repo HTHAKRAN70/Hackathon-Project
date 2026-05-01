@@ -1,5 +1,4 @@
 package testcases;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -7,143 +6,145 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import base.BaseTest;
 import pages.AddressPage;
 import pages.AgePage;
 import pages.HealthInsuranceResultPage;
 import pages.HomePage;
 import pages.MembersPage;
-
 public class TestHealthInsurance extends BaseTest {
-	HomePage home;
+
+    HomePage home;
     MembersPage member;
     AddressPage address;
     AgePage age;
     HealthInsuranceResultPage result;
     WebDriverWait wait;
     SoftAssert softAssert;
+
     @BeforeMethod
     public void initPages() {
-    	softAssert = new SoftAssert();
+        softAssert = new SoftAssert();
         home = new HomePage(driver);
         member = new MembersPage(driver);
-        age=new AgePage(driver);
-        address=new AddressPage(driver);
-        result=new HealthInsuranceResultPage(driver);
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        age = new AgePage(driver);
+        address = new AddressPage(driver);
+        result = new HealthInsuranceResultPage(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-	@Test
-	public void testHealthInsurance() throws InterruptedException {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[normalize-space()='Best Health Insurance plans. Customized for you.']")));
-		home.getGenderButton("Male").click();
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		member.SelectMembers(true,true,false,true,true,true,3,0);
-		member.getNextButton().click();
-		age.SelectAge("25","25","0","4m,4y,4m","70","70");
-		age.getNextButton().click();
-		Thread.sleep(2000);
-		address.getYouPinCodeInput().sendKeys("251201");
-		address.getParentPinCodeInput().sendKeys("251201");
-		address.getMobileNumberInput().sendKeys("7017583580");
-	    address.getContinueButton().click();
-	    int noOfResults=result.getNumberOfResults();
-	    System.out.println(noOfResults);
-	    List<List<String>> allPlans = result.fetchAllPlanDetails();
-		 for (int i = 0; i < allPlans.size(); i++) {
-		     List<String> plan = allPlans.get(i);
-		     System.out.println("Insurer      : " + plan.get(0));
-		     System.out.println("Plan Name    : " + plan.get(1));
-		     System.out.println("Price / Year : " + plan.get(2));
-		     System.out.println("Sum Assured  : " + plan.get(3));
-		 }
-	}
-	@Test
-	public void testCoupleChildrenAgeGapLess18() throws InterruptedException {
-		
-		home.getGenderButton("Male").click();
-		try {
-			Thread.sleep(4000);
-		}catch(InterruptedException e) {
-			e.printStackTrace();
-		}
-		member.SelectMembers(true,true,false,true,true,true,3,0);
-		member.getNextButton().click();
-		age.SelectAge("18","18","0","11m,11m,4y","35","35");
-		age.getNextButton().click();
-		String errorMssg=age.getErrorMessage();
-		softAssert.assertEquals(errorMssg,"Your kid has to be atleast 18 years younger than you and spouse");	
-		softAssert.assertAll();
-	}
-	@Test
-	public void testeditmemberdetailsbutton() throws InterruptedException {
-		
-		home.getGenderButton("Male").click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		member.SelectMembers(true,true,false,true,true,true,3,0);
-		member.getNextButton().click();
-		age.SelectAge("25","25","0","4m,4y,4m","70","70");
-		age.getNextButton().click();
-		Thread.sleep(2000);
-		address.getYouPinCodeInput().sendKeys("251201");
-		address.getParentPinCodeInput().sendKeys("251201");
-		address.getMobileNumberInput().sendKeys("7017583580");
-	    address.getContinueButton().click();
-	    result.getViewMemberDetailsButton().click();
-	    result.getEditDetailsButton().click();
-	    String currUrl=driver.getCurrentUrl();
-	    softAssert.assertEquals(currUrl,"https://www.coverfox.com/health-plan/");
-	    softAssert.assertAll();
-		
-	}
-	
-	@Test
-	public void testwithoutPinCodePhoneNumber() throws InterruptedException {
-		home.getGenderButton("Male").click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		member.SelectMembers(true,true,false,true,true,true,3,0);
-		member.getNextButton().click();
-		age.SelectAge("25","25","0","4m,4y,4m","70","70");
-		age.getNextButton().click();
-		Thread.sleep(2000);
-		address.getYouPinCodeInput().sendKeys("251201");
-		address.getParentPinCodeInput().sendKeys("");
-		address.getMobileNumberInput().sendKeys("7017583580");
-	    address.getContinueButton().click();
-	    String erroMssg= address.getErrorMssg();
-	    softAssert.assertEquals(erroMssg,"Please enter a valid pincode");
-	    softAssert.assertAll();
-	   
-	}
-	
-	@Test
-	public void testWithoutSelectingAnyMember() throws InterruptedException {
-		home.getGenderButton("Male").click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		member.SelectMembers(false,false,false,false,false,false,3,0);
-		member.getNextButton().click();
-		String errorMssg=member.getErrorMessage();
-		softAssert.assertEquals(errorMssg,"* Select one or more members to continue");
-	    softAssert.assertAll();
-	}
-	
+    
+    @DataProvider(name = "validInsuranceData")
+    public Object[][] validInsuranceData() {
+        return new Object[][] {
+            {"25","25","0","4m,4y,4m","70","70","251201","251201","7017583580"}
+        };
+    }
+
+    @DataProvider(name = "ageGapInvalidData")
+    public Object[][] ageGapInvalidData() {
+        return new Object[][] {
+            {"18","18","0","11m,11m,4y","35","35",
+             "Your kid has to be atleast 18 years younger than you and spouse"}
+        };
+    }
+
+    @DataProvider(name = "editMemberData")
+    public Object[][] editMemberData() {
+        return new Object[][] {
+            {"25","25","0","4m,4y,4m","70","70","251201","251201","7017583580",
+             "https://www.coverfox.com/health-plan/"}
+        };
+    }
+
+    @DataProvider(name = "invalidPincodeData")
+    public Object[][] invalidPincodeData() {
+        return new Object[][] {
+            {"25","25","0","4m,4y,4m","70","70","251201","", "7017583580",
+             "Please enter a valid pincode"}
+        };
+    }
+
+    @DataProvider(name = "noMemberSelectedData")
+    public Object[][] noMemberSelectedData() {
+        return new Object[][] {
+            {"* Select one or more members to continue"}
+        };
+    }
+
+    @Test(dataProvider = "noMemberSelectedData" , priority=0)
+    public void testWithoutSelectingAnyMember(String expectedError) {
+    	home.selectGender("Male");
+    	member.selectMembers(false, false, false, false, false, false, 0, 0);
+        member.getNextButton().click();
+        String mssg=member.getErrorMessage();
+        softAssert.assertEquals(mssg, expectedError);
+        softAssert.assertAll();
+    }
+    
+    @Test(priority=1,dependsOnMethods ="testWithoutSelectingAnyMember",dataProvider = "ageGapInvalidData")
+    public void testCoupleChildrenAgeGapLess18(
+            String yourAge, String spouseAge, String daughterAge,
+            String sonAges, String fatherAge, String motherAge,
+            String expectedError) throws InterruptedException {
+    	Thread.sleep(2000);
+        member.selectMembers(true, true, false, true, true, true, 3, 0);
+        member.getNextButton().click();
+        age.selectAge(yourAge, spouseAge, daughterAge, sonAges, fatherAge, motherAge);
+        age.clickNext();
+        softAssert.assertEquals(age.getErrorMessage(), expectedError);
+        softAssert.assertAll();
+    }
+    
+    @Test(priority=2,dependsOnMethods="testCoupleChildrenAgeGapLess18",dataProvider = "invalidPincodeData")
+    public void testWithoutPinCode(
+            String yourAge, String spouseAge, String daughterAge,
+            String sonAges, String fatherAge, String motherAge,
+            String youPin, String parentPin, String mobile,
+            String expectedError) {	
+        age.selectAge(yourAge, spouseAge, daughterAge, sonAges, fatherAge, motherAge);
+        age.clickNext();
+        address.enterAddressDetails(youPin, parentPin, mobile);
+        softAssert.assertEquals(address.getErrorMessage(), expectedError);
+        softAssert.assertAll();
+    }
+    
+    @Test(priority=3,dependsOnMethods="testWithoutPinCode",dataProvider = "editMemberData")
+    public void testEditMemberDetailsButton(
+            String yourAge, String spouseAge, String daughterAge,
+            String sonAges, String fatherAge, String motherAge,
+            String youPin, String parentPin, String mobile,
+            String expectedUrl) {
+        address.enterAddressDetails(youPin, parentPin, mobile);
+        result.getViewMemberDetailsButton().click();
+        result.getEditDetailsButton().click();
+        softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+        softAssert.assertAll();
+    }
+    
+    @Test(priority=4,dependsOnMethods="testEditMemberDetailsButton",dataProvider = "validInsuranceData")
+    public void testHealthInsurance(
+            String yourAge, String spouseAge, String daughterAge,
+            String sonAges, String fatherAge, String motherAge,
+            String youPin, String parentPin, String mobile) throws InterruptedException {
+        member.getNextButton().click();
+        age.selectAge(yourAge, spouseAge, daughterAge, sonAges, fatherAge, motherAge);
+        age.clickNext();
+        address.enterAddressDetails(youPin, parentPin, mobile);
+        int resultCount = result.getNumberOfResults();
+        softAssert.assertTrue(resultCount > 0, "No insurance plans found");
+        List<List<String>> allPlans = result.fetchAllPlanDetails();
+        softAssert.assertTrue(allPlans.size() > 0, "Plans list is empty");
+        softAssert.assertAll();
+    }
+
+    
+
+    
+
+    
+    
 }

@@ -1,40 +1,27 @@
-
 package utils;
 
 import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.nio.file.Files;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 public class ScreenshotUtils {
 
-    private ScreenshotUtils() {
-        // Prevent instantiation
-    }
-
-    public static String takeScreenshot(WebDriver driver, String screenshotName) {
-
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss")
-                .format(new Date());
-
-        String filePath = System.getProperty("user.dir")
-                + "/screenshots/"
-                + screenshotName + "_" + timestamp + ".png";
+    public static String takeScreenshot(WebDriver driver, String testName) {
 
         try {
-            TakesScreenshot ts = (TakesScreenshot) driver;
-            File source = ts.getScreenshotAs(OutputType.FILE);
-            File destination = new File(filePath);
-            FileUtils.copyFile(source, destination);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            File src = ((TakesScreenshot) driver)
+                    .getScreenshotAs(OutputType.FILE);
 
-        return filePath;
+            String path = "screenshots/" + testName + ".png";
+            File dest = new File(path);
+            Files.copy(src.toPath(), dest.toPath());
+
+            return path;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

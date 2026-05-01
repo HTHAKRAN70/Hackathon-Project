@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding ="UTF-8"?>
-<suite name="Book Shopping Workflow Suite" >
+<suite name="Insuranve Website automation" >
+	
+	<listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
 
     <test name="End to End Flow">
     <parameter name="browser" value="chrome" />
