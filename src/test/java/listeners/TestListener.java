@@ -1,12 +1,16 @@
 package listeners;
 
-import org.testng.*;
-import com.aventstack.extentreports.*;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 import base.BaseTest;
 import utils.ExtentManager;
 import utils.ScreenshotUtils;
-
 public class TestListener implements ITestListener {
 
     private static ExtentReports extent = ExtentManager.getExtent();

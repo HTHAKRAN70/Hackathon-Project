@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-01T18:15:41 IST" name="Default suite" finished-at="2026-05-01T18:16:33 IST" duration-ms="51482">
+  <suite started-at="2026-05-01T18:49:07 IST" name="Default suite" finished-at="2026-05-01T18:50:01 IST" duration-ms="54859">
     <groups>
     </groups>
-    <test started-at="2026-05-01T18:15:41 IST" name="Default test" finished-at="2026-05-01T18:16:33 IST" duration-ms="51482">
+    <test started-at="2026-05-01T18:49:07 IST" name="Default test" finished-at="2026-05-01T18:50:01 IST" duration-ms="54859">
       <class name="testcases.TestHealthInsurance">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:15:41 IST" name="setUp" finished-at="2026-05-01T18:15:49 IST" duration-ms="8224" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:07 IST" name="setUp" finished-at="2026-05-01T18:49:17 IST" duration-ms="10717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:15:49 IST" name="initPages" finished-at="2026-05-01T18:15:49 IST" duration-ms="36" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:17 IST" name="initPages" finished-at="2026-05-01T18:49:17 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testWithoutSelectingAnyMember(java.lang.String)[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:15:49 IST" name="testWithoutSelectingAnyMember" data-provider="noMemberSelectedData" finished-at="2026-05-01T18:15:53 IST" duration-ms="3316" status="PASS">
+        <test-method signature="testWithoutSelectingAnyMember(java.lang.String)[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:17 IST" name="testWithoutSelectingAnyMember" data-provider="noMemberSelectedData" finished-at="2026-05-01T18:49:20 IST" duration-ms="2359" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWithoutSelectingAnyMember -->
-        <test-method signature="testCoupleChildrenAgeGapLess18(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:15:53 IST" name="testCoupleChildrenAgeGapLess18" data-provider="ageGapInvalidData" finished-at="2026-05-01T18:16:00 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutSelectingAnyMember" duration-ms="6793" status="PASS">
+        <test-method signature="testCoupleChildrenAgeGapLess18(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:20 IST" name="testCoupleChildrenAgeGapLess18" data-provider="ageGapInvalidData" finished-at="2026-05-01T18:49:27 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutSelectingAnyMember" duration-ms="7154" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,15 +67,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCoupleChildrenAgeGapLess18 -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:15:53 IST" name="initPages" finished-at="2026-05-01T18:15:53 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:20 IST" name="initPages" finished-at="2026-05-01T18:49:20 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:00 IST" name="initPages" finished-at="2026-05-01T18:16:00 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method signature="testWithoutPinCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:00 IST" name="testWithoutPinCode" data-provider="invalidPincodeData" finished-at="2026-05-01T18:16:03 IST" depends-on-methods="testcases.TestHealthInsurance.testCoupleChildrenAgeGapLess18" duration-ms="3177" status="PASS">
+        <test-method signature="testWithoutPinCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:27 IST" name="testWithoutPinCode" data-provider="invalidPincodeData" finished-at="2026-05-01T18:49:31 IST" depends-on-methods="testcases.TestHealthInsurance.testCoupleChildrenAgeGapLess18" duration-ms="3725" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -131,11 +127,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWithoutPinCode -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:03 IST" name="initPages" finished-at="2026-05-01T18:16:03 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:27 IST" name="initPages" finished-at="2026-05-01T18:49:27 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testEditMemberDetailsButton(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:03 IST" name="testEditMemberDetailsButton" data-provider="editMemberData" finished-at="2026-05-01T18:16:05 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutPinCode" duration-ms="1874" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:31 IST" name="initPages" finished-at="2026-05-01T18:49:31 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="testEditMemberDetailsButton(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:31 IST" name="testEditMemberDetailsButton" data-provider="editMemberData" finished-at="2026-05-01T18:49:33 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutPinCode" duration-ms="2120" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -191,11 +191,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEditMemberDetailsButton -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:05 IST" name="initPages" finished-at="2026-05-01T18:16:05 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:34 IST" name="initPages" finished-at="2026-05-01T18:49:34 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testHealthInsurance(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:05 IST" name="testHealthInsurance" data-provider="validInsuranceData" finished-at="2026-05-01T18:16:24 IST" depends-on-methods="testcases.TestHealthInsurance.testEditMemberDetailsButton" duration-ms="19370" status="PASS">
+        <test-method signature="testHealthInsurance(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:34 IST" name="testHealthInsurance" data-provider="validInsuranceData" finished-at="2026-05-01T18:49:54 IST" depends-on-methods="testcases.TestHealthInsurance.testEditMemberDetailsButton" duration-ms="20338" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -246,7 +246,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHealthInsurance -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestHealthInsurance@3bd82cf5]" started-at="2026-05-01T18:16:24 IST" name="tearDown" finished-at="2026-05-01T18:16:33 IST" duration-ms="8512" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestHealthInsurance@7770f470]" started-at="2026-05-01T18:49:54 IST" name="tearDown" finished-at="2026-05-01T18:50:01 IST" duration-ms="7301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
