@@ -3,7 +3,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -27,7 +27,7 @@ public class TestHealthInsurance extends BaseTest {
     WebDriverWait wait;
     SoftAssert softAssert;
 
-    @BeforeMethod
+    @BeforeClass
     public void initPages() {
         softAssert = new SoftAssert();
         home = new HomePage(driver);
