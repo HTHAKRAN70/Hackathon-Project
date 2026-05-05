@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding ="UTF-8"?>
 <suite name="Insuranve Website automation" >
-	
 	<listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>
@@ -9,7 +8,7 @@
     <parameter name="browser" value="chrome" />
         <classes>
             <class name="testcases.TestHealthInsurance"/>
-
+            <class name="testcases.TestComplaintFlow"/>
         </classes>
     </test>
 

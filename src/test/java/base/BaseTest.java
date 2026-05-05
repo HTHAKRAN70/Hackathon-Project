@@ -3,8 +3,8 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import config.ConfigReader;
 
@@ -12,7 +12,7 @@ public class BaseTest extends BasePage {
 
     public  WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void setUp() {
 
         String browserName = ConfigReader.getProperty("browser");
@@ -27,7 +27,7 @@ public class BaseTest extends BasePage {
         driver.get(ConfigReader.getProperty("url"));
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();

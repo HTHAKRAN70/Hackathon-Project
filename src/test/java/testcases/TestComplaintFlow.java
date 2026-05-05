@@ -1,15 +1,15 @@
 package testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.ContactUsPage;
 import pages.ComplaintPage;
 import utils.ScreenshotUtils;
-
+@Listeners(listeners.TestListener.class)
 public class TestComplaintFlow extends BaseTest {
-    // Reusable navigation method
     public ComplaintPage goToComplaintPage() {
         ContactUsPage contactPage = new ContactUsPage(driver);
         contactPage.clickContactUs();
@@ -68,7 +68,6 @@ public class TestComplaintFlow extends BaseTest {
     }
     @Test(priority = 5)
     public void invalidEmailTest() {
-
         ComplaintPage page = goToComplaintPage();
         page.fillForm("TestUser", "test", "00010","Ds","9876543210");
         page.clickSubmit();
