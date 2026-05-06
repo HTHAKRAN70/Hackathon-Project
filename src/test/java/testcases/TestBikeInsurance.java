@@ -103,23 +103,38 @@ public class TestBikeInsurance extends BaseTest {
         boolean isCorrectUrl = wait.until(ExpectedConditions.urlContains("two-wheeler-insurance"));
         
         softAssert.assertTrue(isCorrectUrl, "URL did not navigate to bike-insurance! Current: " + driver.getCurrentUrl());
+        
+        System.out.println("Navigation successful. Current URL: " + driver.getCurrentUrl());
         softAssert.assertAll();
     }
 
     // TEST 2: Verify that an invalid registration number triggers the correct error message
     @Test(priority = 1, dependsOnMethods = "testNavigationToBikeSection")
     public void testRegistrationErrorValidation() {
+        System.out.println("Executing: Registration Error Validation Test...");
+        
+        // Enter details
         bikeHome.enterRegNumber("TS00AS2345");
         bikeHome.handleInitialPolicyStatus();
         
+        // Take screenshot immediately after details are entered and error appears
+        utils.ScreenshotUtils.takeScreenshot(driver, "Registration_Entrance_Error");
+        System.out.println("Screenshot captured after entering registration details.");
+        
         String actualError = bikeHome.getErrorMessage();
+        
+        // Use a soft assertion to check the error message without stopping execution
+        // This ensures subsequent tests (Priority 2, 3, etc.) will not be skipped
         softAssert.assertEquals(actualError, "Not a valid registration number");
+        
+        System.out.println("Error message validation complete. Moving to next test.");
         softAssert.assertAll();
     }
 
     // TEST 3: Verify user can manually select bike details (Brand/Model) by clicking "Not Sure"
     @Test(priority = 2, dependsOnMethods = "testRegistrationErrorValidation")
     public void testVehicleManualSelection() {
+    	System.out.println("Executing: Manual Vehicle Selection Test...");
         bikeHome.clickNotSure();
         bikeDetails.clickBikeRideHeading();
         bikeDetails.selectBajajCT100();
@@ -132,6 +147,7 @@ public class TestBikeInsurance extends BaseTest {
     // TEST 4: Verify that providing an RTO loads the results page with at least one plan
     @Test(priority = 3, dependsOnMethods = "testVehicleManualSelection")
     public void testResultsPageAndPlanCount() {
+    	System.out.println("Executing: Results Page and Plan Count Validation Test...");
         bikeDetails.selectRTOAndStatus();
         
         // Wait for the results page to load
@@ -147,9 +163,9 @@ public class TestBikeInsurance extends BaseTest {
     // TEST 5: Verify the user can click "Plan Details" to see more information
     @Test(priority = 4, dependsOnMethods = "testResultsPageAndPlanCount")
     public void testTriggerPlanDetailsOverlay() {
-        // Use JavaScript click to bypass any overlapping elements on the results page
+    	System.out.println("Executing: Trigger Plan Details Overlay Test...");
         bikeDetails.clickPlanDetailsWithJS();
-        
+         
         // Confirm the user is still on the results page after viewing details
         softAssert.assertTrue(driver.getCurrentUrl().contains("results"), "Lost results page context!");
         softAssert.assertAll();

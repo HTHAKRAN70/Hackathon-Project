@@ -6,15 +6,8 @@
       <class name="testcases.TestBikeInsurance">
         <methods>
           <include name="setUp"/>
-          <include name="testWithoutSelectingAnyMember"/>
-          <include name="testHealthInsurance"/>
           <include name="tearDown"/>
-<<<<<<< HEAD
           <include name="testNavigationToBikeSection"/>
-=======
-          <include name="testWithoutPinCode"/>
-          <include name="testCoupleChildrenAgeGapLess18" invocation-numbers="0"/>
->>>>>>> 150842da36b3cc565e56cd43bdf9153a1b7679bc
           <include name="initPages"/>
           <include name="testTriggerPlanDetailsOverlay"/>
           <include name="testResultsPageAndPlanCount"/>

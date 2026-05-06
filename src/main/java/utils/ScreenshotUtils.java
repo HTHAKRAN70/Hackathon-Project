@@ -1,14 +1,8 @@
 package utils;
 
 import java.io.File;
-<<<<<<< HEAD
-import java.nio.file.Files;
-import java.nio.file.Paths;
-=======
 import java.sql.Date;
 import java.text.SimpleDateFormat;
->>>>>>> 150842da36b3cc565e56cd43bdf9153a1b7679bc
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
