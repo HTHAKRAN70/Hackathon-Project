@@ -7,18 +7,26 @@
   <test thread-count="5" name="End to End Flow(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.TestHealthInsurance">
+      <class name="testcases.TestBikeInsurance">
         <methods>
           <include name="setUp"/>
+<<<<<<< HEAD
           <include name="testWithoutSelectingAnyMember" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="testHealthInsurance"/>
           <include name="testWithoutPinCode"/>
           <include name="testCoupleChildrenAgeGapLess18"/>
+=======
+          <include name="tearDown"/>
+          <include name="testNavigationToBikeSection"/>
+>>>>>>> dac45f9b363f5fa55756ddd88a19cad81972a88b
           <include name="initPages"/>
-          <include name="testEditMemberDetailsButton"/>
+          <include name="testTriggerPlanDetailsOverlay"/>
+          <include name="testResultsPageAndPlanCount"/>
+          <include name="testVehicleManualSelection"/>
+          <include name="testRegistrationErrorValidation"/>
         </methods>
-      </class> <!-- testcases.TestHealthInsurance -->
+      </class> <!-- testcases.TestBikeInsurance -->
     </classes>
   </test> <!-- End to End Flow(failed) -->
 </suite> <!-- Failed suite [Insuranve Website automation] -->

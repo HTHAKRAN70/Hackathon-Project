@@ -2,6 +2,7 @@
 <testng-results ignored="0" total="10" passed="5" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-05-06T00:17:34 IST" name="Insuranve Website automation" finished-at="2026-05-06T00:18:51 IST" duration-ms="77819">
     <groups>
     </groups>
@@ -243,10 +244,62 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- testHealthInsurance -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestHealthInsurance@c667f46]" started-at="2026-05-06T00:18:06 IST" name="tearDown" finished-at="2026-05-06T00:18:12 IST" duration-ms="5487" status="PASS">
+=======
+  <suite started-at="2026-05-06T13:21:52 IST" name="Default suite" finished-at="2026-05-06T13:22:15 IST" duration-ms="23484">
+    <groups>
+    </groups>
+    <test started-at="2026-05-06T13:21:52 IST" name="Default test" finished-at="2026-05-06T13:22:15 IST" duration-ms="23484">
+      <class name="testcases.TestBikeInsurance">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:21:52 IST" name="setUp" finished-at="2026-05-06T13:22:02 IST" duration-ms="9654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:02 IST" name="initPages" finished-at="2026-05-06T13:22:02 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="testNavigationToBikeSection()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:02 IST" name="testNavigationToBikeSection" finished-at="2026-05-06T13:22:02 IST" duration-ms="707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigationToBikeSection -->
+        <test-method signature="testRegistrationErrorValidation()[pri:1, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:03 IST" name="testRegistrationErrorValidation" finished-at="2026-05-06T13:22:05 IST" depends-on-methods="testcases.TestBikeInsurance.testNavigationToBikeSection" duration-ms="2202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistrationErrorValidation -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:03 IST" name="initPages" finished-at="2026-05-06T13:22:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:05 IST" name="initPages" finished-at="2026-05-06T13:22:05 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="testVehicleManualSelection()[pri:2, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:05 IST" name="testVehicleManualSelection" finished-at="2026-05-06T13:22:06 IST" depends-on-methods="testcases.TestBikeInsurance.testRegistrationErrorValidation" duration-ms="1715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVehicleManualSelection -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:06 IST" name="initPages" finished-at="2026-05-06T13:22:06 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="testResultsPageAndPlanCount()[pri:3, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:06 IST" name="testResultsPageAndPlanCount" finished-at="2026-05-06T13:22:09 IST" depends-on-methods="testcases.TestBikeInsurance.testVehicleManualSelection" duration-ms="2939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResultsPageAndPlanCount -->
+        <test-method signature="testTriggerPlanDetailsOverlay()[pri:4, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:09 IST" name="testTriggerPlanDetailsOverlay" finished-at="2026-05-06T13:22:09 IST" depends-on-methods="testcases.TestBikeInsurance.testResultsPageAndPlanCount" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTriggerPlanDetailsOverlay -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:09 IST" name="initPages" finished-at="2026-05-06T13:22:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestBikeInsurance@3d285d7e]" started-at="2026-05-06T13:22:09 IST" name="tearDown" finished-at="2026-05-06T13:22:15 IST" duration-ms="5997" status="PASS">
+>>>>>>> dac45f9b363f5fa55756ddd88a19cad81972a88b
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TestHealthInsurance -->
-    </test> <!-- End to End Flow -->
-  </suite> <!-- Insuranve Website automation -->
+      </class> <!-- testcases.TestBikeInsurance -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

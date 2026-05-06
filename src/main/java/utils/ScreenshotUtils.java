@@ -3,7 +3,6 @@ package utils;
 import java.io.File;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -96,10 +95,10 @@ public class ScreenshotUtils {
 
             String path = "screenshots/" + testName + ".png";
             File dest = new File(path);
-            Files.copy(src.toPath(), dest.toPath());
+            Files.copy(src.toPath() , dest.toPath());
 
             return path;
-
+            
         } catch (Exception e) {
             e.printStackTrace();
             return null;

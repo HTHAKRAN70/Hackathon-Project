@@ -141,5 +141,10 @@ public class TestHealthInsurance extends BaseTest {
         List<List<String>> allPlans = result.fetchAllPlanDetails();
         softAssert.assertTrue(allPlans.size() > 0, "Plans list is empty");
         softAssert.assertAll();
+<<<<<<< HEAD
+    }
+ 
+=======
     }   
+>>>>>>> 150842da36b3cc565e56cd43bdf9153a1b7679bc
 }
