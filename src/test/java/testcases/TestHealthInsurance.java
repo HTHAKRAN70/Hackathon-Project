@@ -2,21 +2,23 @@ package testcases;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 import base.BaseTest;
 import pages.AddressPage;
 import pages.AgePage;
 import pages.HealthInsuranceResultPage;
 import pages.HomePage;
 import pages.MembersPage;
-public class TestHealthInsurance extends BaseTest {
 
+@Listeners(listeners.TestListener.class)
+public class TestHealthInsurance extends BaseTest {
+	
     HomePage home;
     MembersPage member;
     AddressPage address;
@@ -139,12 +141,5 @@ public class TestHealthInsurance extends BaseTest {
         List<List<String>> allPlans = result.fetchAllPlanDetails();
         softAssert.assertTrue(allPlans.size() > 0, "Plans list is empty");
         softAssert.assertAll();
-    }
-
-    
-
-    
-
-    
-    
+    }   
 }
