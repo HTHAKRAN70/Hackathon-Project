@@ -15,31 +15,19 @@ public class ScreenshotUtils {
             }
 
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-            // ✅ Absolute path (VERY IMPORTANT FIX)
             String projectPath = System.getProperty("user.dir");
-
             String dirPath = projectPath + "/screenshots/";
             File directory = new File(dirPath);
-
-            // ✅ Create folder if not exists
             if (!directory.exists()) {
                 boolean created = directory.mkdirs();
-                System.out.println("📁 Screenshot folder created: " + created);
+                System.out.println("Screenshot folder created: " + created);
             }
-
             String filePath = dirPath + testName + "_" + System.currentTimeMillis() + ".png";
-
             File dest = new File(filePath);
             Files.copy(src.toPath(), dest.toPath());
-
-            // ✅ Debug print
-            System.out.println("📸 Screenshot saved at: " + dest.getAbsolutePath());
-
             return dest.getAbsolutePath();
-
         } catch (Exception e) {
-            System.out.println("Screenshot FAILED due to:");
+            System.out.println("Screenshot failed due to:");
             e.printStackTrace();
             return null;
         }

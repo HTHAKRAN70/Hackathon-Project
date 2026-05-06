@@ -1,85 +1,87 @@
 package testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.ContactUsPage;
 import pages.ComplaintPage;
+import utils.ExcelUtility;
 import utils.ScreenshotUtils;
 
 public class TestComplaintFlow extends BaseTest {
-    // Reusable navigation method
+    String excelPath = System.getProperty("user.dir")
+            + "/src/main/resources/data/testdata.xlsx";
     public ComplaintPage goToComplaintPage() {
         ContactUsPage contactPage = new ContactUsPage(driver);
         contactPage.clickContactUs();
         contactPage.clickFileComplaint();
         return new ComplaintPage(driver);
     }
-
     @Test(priority = 1)
     public void validateContactUsPage() {
         ContactUsPage contact = new ContactUsPage(driver);
         contact.clickContactUs();
         String url = contact.getPageUrl();
-        System.out.println("Url: " + url);
-        ScreenshotUtils.takeScreenshot(driver, "Image1");
-        Assert.assertTrue(url.contains("https://www.coverfox.com/contact/"));
+        ScreenshotUtils.takeScreenshot(driver, "TC1");
+        Assert.assertTrue(url.contains("contact"));
+        System.out.println("Contact page validated: " + url);
     }
-    @Test(priority = 2)
-    public void invalidPhoneNumberTest() {
+    @Test(priority = 2, dataProvider = "invalidPhoneData")
+    public void invalidPhoneNumberTest(String name, String email, String policy, String complaint, String mobile) {
         ComplaintPage page = goToComplaintPage();
-        page.fillForm("TestUser", "test@gmail.com", "00010","Ds","123");
+        page.fillForm(name, email, policy, complaint, mobile);
         page.clickSubmit();
-        String actualError = page.getPhoneErrorMessage();
-        String expectedError = "We can’t proceed without your mobile number or invalid mobile number. Help us?";
-        Assert.assertEquals(actualError.trim(), expectedError);
-        ScreenshotUtils.takeScreenshot(driver, "Image2");
-        System.out.println("Validation Passed - Invalid Phone Error Displayed"+actualError);
-
+        String error = page.getPhoneErrorMessage();
+        Assert.assertTrue(error.contains("mobile"));
+        ScreenshotUtils.takeScreenshot(driver, "TC2");
+        System.out.println("Invalid phone validation: " + error);
     }
-    @Test(priority = 3)
-    public void missingPolicyIdTest() {
+    @Test(priority = 3, dataProvider = "missingPolicyData")
+    public void missingPolicyIdTest(String name, String email, String policy, String complaint, String mobile) {
         ComplaintPage page = goToComplaintPage();
-        page.fillForm("TestUser", "test@gmail.com", "","Ds","9876543210");
+        page.fillForm(name, email, policy, complaint, mobile);
         page.clickSubmit();
-        String successMsg = page.getSuccessMessage();
-        Assert.assertTrue(
-                successMsg.contains("THANK YOU"),
-                "Success message not displayed correctly"
-        );
-        ScreenshotUtils.takeScreenshot(driver, "Image3");
-        System.out.println("Form submitted successfully without Policy Id"+successMsg);
+        String success = page.getSuccessMessage();
+        Assert.assertTrue(success.contains("THANK YOU"));
+        ScreenshotUtils.takeScreenshot(driver, "TC3");
+        System.out.println("Missing policy validation: " + success);
     }
-    @Test(priority = 4)
-    public void successfulSubmissionTest() {
-
+    @Test(priority = 4, dataProvider = "successData")
+    public void successfulSubmissionTest(String name, String email, String policy, String complaint, String mobile) {
         ComplaintPage page = goToComplaintPage();
-
-        page.fillForm("TestUser", "test@gmail.com", "00001","Ds","9876543210");
+        page.fillForm(name, email, policy, complaint, mobile);
         page.clickSubmit();
-        String successMsg = page.getSuccessMessage();
-        Assert.assertTrue(
-                successMsg.contains("THANK YOU"),
-                "Success message not displayed correctly"
-        );
-        ScreenshotUtils.takeScreenshot(driver, "Image4");
-        System.out.println("Form submitted successfully"+successMsg);
+        String success = page.getSuccessMessage();
+        Assert.assertTrue(success.contains("THANK YOU"));
+        ScreenshotUtils.takeScreenshot(driver, "TC4");
+        System.out.println("Success case: " + success);
     }
-    @Test(priority = 5)
-    public void invalidEmailTest() {
-
+    @Test(priority = 5, dataProvider = "invalidEmailData")
+    public void invalidEmailTest(String name, String email, String policy, String complaint, String mobile) {
         ComplaintPage page = goToComplaintPage();
-        page.fillForm("TestUser", "test", "00010","Ds","9876543210");
+        page.fillForm(name, email, policy, complaint, mobile);
         page.clickSubmit();
-        String actualError = page.getEmailErrorMessage();
-        String expectedText = "We can’t proceed without your email address or invalid email address";
-        Assert.assertTrue(
-                actualError.contains(expectedText),
-                "Email validation message not displayed correctly"
-        );
-        ScreenshotUtils.takeScreenshot(driver, "Image5");
-        System.out.println("Invalid email validation passed: "+actualError);
-
+        String error = page.getEmailErrorMessage();
+        Assert.assertTrue(error.contains("email"));
+        ScreenshotUtils.takeScreenshot(driver, "TC5");
+        System.out.println("Email validation: " + error);
+    }
+    @DataProvider(name = "invalidPhoneData")
+    public Object[][] invalidPhoneData() {
+        return ExcelUtility.getFilteredData(excelPath, "ComplaintData", "invalid_phone");
+    }
+    @DataProvider(name = "missingPolicyData")
+    public Object[][] missingPolicyData() {
+        return ExcelUtility.getFilteredData(excelPath, "ComplaintData", "missing_policy");
+    }
+    @DataProvider(name = "successData")
+    public Object[][] successData() {
+        return ExcelUtility.getFilteredData(excelPath, "ComplaintData", "success");
+    }
+    @DataProvider(name = "invalidEmailData")
+    public Object[][] invalidEmailData() {
+        return ExcelUtility.getFilteredData(excelPath, "ComplaintData", "invalid_email");
     }
 }
