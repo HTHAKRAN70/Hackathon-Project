@@ -78,8 +78,6 @@ public class BikeDetailsPage {
     private final By notExpiredValue = By.xpath("//div[text()='Not expired']");
     private final By viewQuotesFinalBtn = By.xpath("//button[contains(@title,'View Quotes')]");
     private final By planDetailsBtn = By.xpath("(//p[text()='Plan Details'])[1]");
-    
-    // Locator for counting plans to verify results loaded
     private final By allPlanCards = By.xpath("(//p[text()='Plan Details'])");
 
     public BikeDetailsPage(WebDriver driver) {
