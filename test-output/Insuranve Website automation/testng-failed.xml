@@ -9,12 +9,12 @@
     <classes>
       <class name="testcases.TestHealthInsurance">
         <methods>
-          <include name="testWithoutSelectingAnyMember"/>
           <include name="setUp"/>
+          <include name="testWithoutSelectingAnyMember" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="testWithoutPinCode"/>
           <include name="testHealthInsurance"/>
-          <include name="testCoupleChildrenAgeGapLess18" invocation-numbers="0"/>
+          <include name="testWithoutPinCode"/>
+          <include name="testCoupleChildrenAgeGapLess18"/>
           <include name="initPages"/>
           <include name="testEditMemberDetailsButton"/>
         </methods>

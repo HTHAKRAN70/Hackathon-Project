@@ -27,4 +27,10 @@ public class ConfigReader {
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }
+    public static String getExcelFilePath(String readOrWrite) {
+    	if(readOrWrite.equals("read"))
+    		return properties.getProperty("excelFilePath");
+    	else
+    		return properties.getProperty("excelWritePath");
+    }
 }
