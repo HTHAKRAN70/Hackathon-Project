@@ -2,6 +2,7 @@ package utils;
 
 import java.io.File;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.openqa.selenium.*;
 
@@ -15,10 +16,10 @@ public class ScreenshotUtils {
 
             String path = "screenshots/" + testName + ".png";
             File dest = new File(path);
-            Files.copy(src.toPath(), dest.toPath());
+            Files.copy(src.toPath() , dest.toPath());
 
             return path;
-
+            
         } catch (Exception e) {
             e.printStackTrace();
             return null;
