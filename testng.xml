@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Insurance Automation Suite" verbose="2">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="Health Insurance Test">
+        <classes>
+            <class name="testcases.TestHealthInsurance"/>
+        </classes>
+    </test>
+
+    <test name="Car Insurance Test">
+        <classes>
+            <class name="testcases.TestCarInsurance"/>
+        </classes>
+    </test>
+
+</suite>
