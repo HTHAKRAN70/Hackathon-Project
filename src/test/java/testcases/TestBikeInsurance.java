@@ -73,12 +73,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import base.BaseTest;
 import pages.BikeHomePage;
 import pages.BikeDetailsPage;
-
+@Listeners(listeners.TestListener.class)
 public class TestBikeInsurance extends BaseTest {
 
     BikeHomePage bikeHome;

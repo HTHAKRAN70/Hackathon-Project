@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 /target/
+<<<<<<< HEAD
+<<<<<<< HEAD
+"screenshots/" 
+=======
+=======
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
 =======
 screenshots/ 
 reports/
@@ -7,3 +13,9 @@ test-output/
 target/"target/" 
 >>>>>>> master
 "target/" 
+<<<<<<< HEAD
+>>>>>>> sathwika
+"screenshots/" 
+=======
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
+"/target" 

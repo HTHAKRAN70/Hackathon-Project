@@ -6,18 +6,33 @@
       <class name="testcases.TestHealthInsurance">
         <methods>
           <include name="testWithoutSelectingAnyMember"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testHealthInsurance"/>
+          <include name="testWithoutPinCode"/>
+=======
           <include name="setUp"/>
 <<<<<<< HEAD
           <include name="testWithoutPinCode"/>
           <include name="tearDown"/>
           <include name="testHealthInsurance"/>
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
+=======
+          <include name="setUp"/>
+<<<<<<< HEAD
+          <include name="testWithoutPinCode"/>
+          <include name="tearDown"/>
+          <include name="testHealthInsurance"/>
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
           <include name="testCoupleChildrenAgeGapLess18"/>
 =======
           <include name="testNavigationToBikeSection"/>
           <include name="tearDown"/>
 >>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
           <include name="initPages"/>
-          <include name="testEditMemberDetailsButton"/>
+          <include name="testEditMemberDetailsButton" invocation-numbers="0"/>
         </methods>
       </class> <!-- testcases.TestHealthInsurance -->
     </classes>

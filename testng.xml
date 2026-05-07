@@ -11,6 +11,10 @@
             <class name="testcases.TestComplaintFlow"/>
             <class name="testcases.TestCarInsurance"/>
             <class name="testcases.TestBikeInsurance"/>
+<<<<<<< HEAD
+            <class name="testcases.TestBusinessInsurance"/>
+=======
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
         </classes>
     </test>
 
