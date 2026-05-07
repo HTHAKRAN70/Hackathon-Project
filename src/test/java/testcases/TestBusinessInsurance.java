@@ -12,7 +12,7 @@ import pages.BusinessHomePage;
 import pages.BusinessInsurancePage;
 import utils.ScreenshotUtils;
 
-@Listeners(TestListener.class)
+@Listeners(listeners.TestListener.class)
 public class TestBusinessInsurance extends BaseTest {
 
     BusinessHomePage businessHome;
