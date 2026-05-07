@@ -1,9 +1,11 @@
 package config;
 
 import java.io.InputStream;
+
 import java.util.Properties;
 
 public class ConfigReader {
+
 
     private static Properties properties = new Properties();
 
@@ -21,10 +23,19 @@ public class ConfigReader {
 
         } catch (Exception e) {
             throw new RuntimeException("Failed to load Config.properties");
+
         }
     }
 
     public static String getProperty(String key) {
+
         return properties.getProperty(key);
     }
+    public static String getExcelFilePath(String readOrWrite) {
+    	if(readOrWrite.equals("read"))
+    		return properties.getProperty("excelFilePath");
+    	else
+    		return properties.getProperty("excelWritePath");
+    }
 }
+
