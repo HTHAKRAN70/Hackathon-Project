@@ -7,12 +7,11 @@ import org.testng.ITestResult;
  
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
- 
+
 import base.BaseTest;
 import utils.ExcelUtility;
 import utils.ExtentManager;
 import utils.ScreenshotUtils;
- 
 public class TestListener implements ITestListener {
  
     private static ExtentReports extent = ExtentManager.getExtent();
@@ -36,12 +35,13 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
     	 BaseTest base = (BaseTest) result.getInstance();
- 
+
          String screenshotPath =
              ScreenshotUtils.takeScreenshot(
                  base.driver,
                  result.getMethod().getMethodName() + "_PASS");
- 
+
+
          test.pass("✅ Test Passed");
         write(result.getName(), "PASS");
     }
@@ -49,7 +49,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
     	BaseTest base = (BaseTest) result.getInstance();
- 
         String screenshotPath =
             ScreenshotUtils.takeScreenshot(
                 base.driver,

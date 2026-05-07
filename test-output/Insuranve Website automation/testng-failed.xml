@@ -7,6 +7,7 @@
   <test thread-count="5" name="End to End Flow(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+<<<<<<< HEAD
       <class name="testcases.TestComplaintFlow">
         <methods>
           <include name="setUp"/>
@@ -26,9 +27,20 @@
           <include name="tearDown"/>
           <include name="testWithoutPinCode"/>
           <include name="testCoupleChildrenAgeGapLess18"/>
+=======
+      <class name="testcases.TestBikeInsurance">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testNavigationToBikeSection"/>
+>>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
           <include name="initPages"/>
-          <include name="testEditMemberDetailsButton"/>
+          <include name="testTriggerPlanDetailsOverlay"/>
+          <include name="testResultsPageAndPlanCount"/>
+          <include name="testVehicleManualSelection"/>
+          <include name="testRegistrationErrorValidation"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- testcases.TestHealthInsurance -->
       <class name="testcases.TestBikeInsurance">
         <methods>
@@ -54,6 +66,20 @@
           <include name="testEnterPincodeAndProceed"/>
         </methods>
       </class> <!-- testcases.TestCarInsurance -->
+=======
+      </class> <!-- testcases.TestBikeInsurance -->
+      <class name="testcases.TestComplaintFlow">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="invalidPhoneNumberTest"/>
+          <include name="invalidEmailTest"/>
+          <include name="missingPolicyIdTest"/>
+          <include name="validateContactUsPage"/>
+          <include name="successfulSubmissionTest"/>
+        </methods>
+      </class> <!-- testcases.TestComplaintFlow -->
+>>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
     </classes>
   </test> <!-- End to End Flow(failed) -->
 </suite> <!-- Failed suite [Insuranve Website automation] -->
