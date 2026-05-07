@@ -3,6 +3,7 @@ package pages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -101,11 +102,18 @@ public class MembersPage {
     }
 
     public String getErrorMessage() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage))
-                       .getText();
-        } catch (Exception e) {
-            return "";
-        }
+	try {
+	        WebElement error =
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+	
+	        ((JavascriptExecutor) driver)
+	                .executeScript("arguments[0].scrollIntoView(true);", error);
+	
+	        return error.getText();
+	
+	    } catch (Exception e) {
+	        return "";
+	    }
+
     }
 }

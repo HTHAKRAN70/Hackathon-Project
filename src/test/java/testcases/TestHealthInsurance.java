@@ -2,7 +2,6 @@ package testcases;
 import java.time.Duration;
 import java.util.List;
 
-
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -10,12 +9,17 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import base.BaseTest;
 import pages.AddressPage;
 import pages.AgePage;
 import pages.HealthInsuranceResultPage;
 import pages.HomePage;
 import pages.MembersPage;
+import utils.ExtentManager;
+import utils.ScreenshotUtils;
 
 
 @Listeners(listeners.TestListener.class)
@@ -28,6 +32,8 @@ public class TestHealthInsurance extends BaseTest {
     HealthInsuranceResultPage result;
     WebDriverWait wait;
     SoftAssert softAssert;
+    private static ExtentReports extent = ExtentManager.getExtent();
+    private static ExtentTest test;
 
 
     @BeforeClass
@@ -88,6 +94,16 @@ public class TestHealthInsurance extends BaseTest {
         String mssg=member.getErrorMessage();
         softAssert.assertEquals(mssg, expectedError);
         softAssert.assertAll();
+        String screenshotPath = ScreenshotUtils.takeScreenshot(
+	            driver,
+	            "testWithoutSelectingAnyMember"
+	    );
+	
+	    // ✅ STORE IT IN TEST RESULT (NO EXTENT HERE)
+	    org.testng.Reporter.getCurrentTestResult()
+	            .setAttribute("testWithoutSelectingAnyMember", screenshotPath);
+
+        
     }
     
     @Test(priority=1,dependsOnMethods ="testWithoutSelectingAnyMember",dataProvider = "ageGapInvalidData")
@@ -102,6 +118,17 @@ public class TestHealthInsurance extends BaseTest {
         age.clickNext();
         softAssert.assertEquals(age.getErrorMessage(), expectedError);
         softAssert.assertAll();
+
+	String screenshotPath = ScreenshotUtils.takeScreenshot(
+	            driver,
+	            "testCoupleChildrenAgeGapLess18"
+	    );
+	
+	    // ✅ STORE IT IN TEST RESULT (NO EXTENT HERE)
+	    org.testng.Reporter.getCurrentTestResult()
+	            .setAttribute("SCREENSHOT_PATH", screenshotPath);
+
+        
     }
     
     @Test(priority=2,dependsOnMethods="testCoupleChildrenAgeGapLess18",dataProvider = "invalidPincodeData")
@@ -115,6 +142,16 @@ public class TestHealthInsurance extends BaseTest {
         address.enterAddressDetails(youPin, parentPin, mobile);
         softAssert.assertEquals(address.getErrorMessage(), expectedError);
         softAssert.assertAll();
+        String screenshotPath = ScreenshotUtils.takeScreenshot(
+	            driver,
+	            "testWithoutPinCode"
+	    );
+	
+	    // ✅ STORE IT IN TEST RESULT (NO EXTENT HERE)
+	    org.testng.Reporter.getCurrentTestResult()
+	            .setAttribute("testWithoutPinCode", screenshotPath);
+
+        
     }
     
     @Test(priority=3,dependsOnMethods="testWithoutPinCode",dataProvider = "editMemberData")
@@ -128,6 +165,7 @@ public class TestHealthInsurance extends BaseTest {
         result.getEditDetailsButton().click();
         softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         softAssert.assertAll();
+        
     }
     
     @Test(priority=4,dependsOnMethods="testEditMemberDetailsButton",dataProvider = "validInsuranceData")
@@ -142,6 +180,15 @@ public class TestHealthInsurance extends BaseTest {
         int resultCount = result.getNumberOfResults();
         softAssert.assertTrue(resultCount > 0, "No insurance plans found");
         List<List<String>> allPlans = result.fetchAllPlanDetails();
+        for(int i=0;i<allPlans.size();i++) {
+        	List<String>list=allPlans.get(i);
+        	
+        	for(int j=0;j<list.size();j++) {
+        		System.out.print(list.get(j)+" ");
+        		if(j!=list.size()-1)System.out.print(" , ");	
+        	}
+        	System.out.println(" ");
+        }
         softAssert.assertTrue(allPlans.size() > 0, "Plans list is empty");
         softAssert.assertAll();
 

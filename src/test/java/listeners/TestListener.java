@@ -37,16 +37,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         BaseTest base = (BaseTest) result.getInstance();
-
-        String screenshotPath =
-                ScreenshotUtils.takeScreenshot(
-                        base.driver,
-                        result.getMethod().getMethodName() + "_PASS"
-                );
-
-        test.pass("✅ Test Passed")
-            .addScreenCaptureFromPath(screenshotPath);
-
         write(result.getName(), "PASS");
     }
 
@@ -61,7 +51,6 @@ public class TestListener implements ITestListener {
                 );
 
         test.fail("❌ Test Failed")
-            .fail(result.getThrowable())
             .addScreenCaptureFromPath(screenshotPath);
 
         write(result.getName(), "FAIL");
