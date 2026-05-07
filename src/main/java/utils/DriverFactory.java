@@ -23,11 +23,7 @@ public class DriverFactory {
             // Your required stealth/disable settings
             options.addArguments("--disable-extensions");
             options.addArguments("--disable-notifications");
-            options.addArguments("--disable-blink-features=AutomationControlled");
-            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-            options.setExperimentalOption("useAutomationExtension", false);
-            
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
 
         } else if (browserName.equalsIgnoreCase("edge")) {
             

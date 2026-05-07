@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Insuranve Website automation]">
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="End to End Flow(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="testcases.TestCarInsurance">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testVerifyPlansAndDetails"/>
+          <include name="testSelectCarDetails"/>
+          <include name="initPages"/>
+          <include name="testNavigateToCarInsurance"/>
+          <include name="testReviewAndProceed"/>
+          <include name="testEnterPincodeAndProceed"/>
+        </methods>
+      </class> <!-- testcases.TestCarInsurance -->
       <class name="testcases.TestHealthInsurance">
         <methods>
-          <include name="testWithoutSelectingAnyMember"/>
           <include name="setUp"/>
-<<<<<<< HEAD
-          <include name="testWithoutPinCode"/>
+          <include name="testWithoutSelectingAnyMember"/>
           <include name="tearDown"/>
+          <include name="testWithoutPinCode"/>
           <include name="testHealthInsurance"/>
           <include name="testCoupleChildrenAgeGapLess18"/>
-=======
-          <include name="tearDown"/>
-          <include name="testNavigationToBikeSection"/>
->>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
           <include name="initPages"/>
           <include name="testEditMemberDetailsButton"/>
         </methods>
-<<<<<<< HEAD
       </class> <!-- testcases.TestHealthInsurance -->
-=======
+      <class name="testcases.TestBikeInsurance">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testNavigationToBikeSection"/>
+          <include name="initPages"/>
+          <include name="testTriggerPlanDetailsOverlay"/>
+          <include name="testResultsPageAndPlanCount"/>
+          <include name="testVehicleManualSelection"/>
+          <include name="testRegistrationErrorValidation"/>
+        </methods>
       </class> <!-- testcases.TestBikeInsurance -->
       <class name="testcases.TestComplaintFlow">
         <methods>
@@ -34,7 +54,6 @@
           <include name="successfulSubmissionTest"/>
         </methods>
       </class> <!-- testcases.TestComplaintFlow -->
->>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- End to End Flow(failed) -->
+</suite> <!-- Failed suite [Insuranve Website automation] -->
