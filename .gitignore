@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 /target/
+=======
+screenshots/ 
+reports/
+test-output/
+target/"target/" 
+>>>>>>> master

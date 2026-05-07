@@ -1,29 +1,41 @@
 package config;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.InputStream;
+
 import java.util.Properties;
 
 public class ConfigReader {
 
-    private static Properties properties;
-    private static final String CONFIG_PATH = "src/main/resources/ObjectRepo/config.properties";
+
+    private static Properties properties = new Properties();
 
     static {
         try {
-            FileInputStream fis = new FileInputStream(CONFIG_PATH);
-            properties = new Properties();
-            properties.load(fis);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load config.properties: " + e.getMessage());
+            InputStream input = ConfigReader.class
+                    .getClassLoader()
+                    .getResourceAsStream("ObjectRepo/config.properties");
+
+            if (input == null) {
+                throw new RuntimeException("Config.properties not found in resources folder");
+            }
+
+            properties.load(input);
+
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to load Config.properties");
+
         }
     }
 
     public static String getProperty(String key) {
-        String value = properties.getProperty(key);
-        if (value == null) {
-            throw new RuntimeException("Property '" + key + "' not found in config.properties");
-        }
-        return value.trim();
+
+        return properties.getProperty(key);
+    }
+    public static String getExcelFilePath(String readOrWrite) {
+    	if(readOrWrite.equals("read"))
+    		return properties.getProperty("excelFilePath");
+    	else
+    		return properties.getProperty("excelWritePath");
     }
 }
+

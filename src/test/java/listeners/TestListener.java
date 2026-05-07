@@ -1,51 +1,82 @@
 package listeners;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+import java.io.IOException;
+ 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
+ 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+ 
+import base.BaseTest;
+import utils.ExcelUtility;
 import utils.ExtentManager;
-import utils.DriverFactory;
 import utils.ScreenshotUtils;
-
+ 
 public class TestListener implements ITestListener {
-
-    private static ExtentReports extent = ExtentManager.getInstance();
-    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
-
+ 
+    private static ExtentReports extent = ExtentManager.getExtent();
+    private static ExtentTest test;
+    private ExcelUtility ex;
+ 
+    @Override
+    public void onStart(ITestContext context) {
+        try {
+            ex = new ExcelUtility();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+ 
     @Override
     public void onTestStart(ITestResult result) {
-        ExtentTest test = extent.createTest(result.getMethod().getMethodName());
-        extentTest.set(test);
+        test = extent.createTest(result.getMethod().getMethodName());
     }
-
+ 
     @Override
     public void onTestSuccess(ITestResult result) {
-        extentTest.get().log(Status.PASS, "Test Passed: " + result.getMethod().getMethodName());
+    	 BaseTest base = (BaseTest) result.getInstance();
+ 
+         String screenshotPath =
+             ScreenshotUtils.takeScreenshot(
+                 base.driver,
+                 result.getMethod().getMethodName() + "_PASS");
+ 
+         test.pass("✅ Test Passed");
+        write(result.getName(), "PASS");
     }
-
+ 
     @Override
     public void onTestFailure(ITestResult result) {
-        extentTest.get().log(Status.FAIL, "Test Failed: " + result.getThrowable());
-
-        // Capture screenshot on failure
-        String screenshotPath = ScreenshotUtils.captureScreenshot(
-            DriverFactory.getDriver(),
-            result.getMethod().getMethodName()
-        );
-        extentTest.get().addScreenCaptureFromPath(screenshotPath);
+    	BaseTest base = (BaseTest) result.getInstance();
+ 
+        String screenshotPath =
+            ScreenshotUtils.takeScreenshot(
+                base.driver,
+                result.getMethod().getMethodName() + "_PASS");
+        write(result.getName(), "FAIL");
     }
-
+ 
     @Override
     public void onTestSkipped(ITestResult result) {
-        extentTest.get().log(Status.SKIP, "Test Skipped: " + result.getMethod().getMethodName());
+        write(result.getName(), "SKIP");
     }
-
+ 
+    private void write(String testName, String status) {
+        try {
+            ex.write(testName, status);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+ 
     @Override
     public void onFinish(ITestContext context) {
+        try {
+            ex.closeExcelFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         extent.flush();
     }
 }

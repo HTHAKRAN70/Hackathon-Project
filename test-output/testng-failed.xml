@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TestCarInsurance">
+      <class name="testcases.TestHealthInsurance">
         <methods>
+          <include name="testWithoutSelectingAnyMember"/>
           <include name="setUp"/>
-          <include name="testVerifyPlansAndDetails"/>
+          <include name="testWithoutPinCode"/>
           <include name="tearDown"/>
-          <include name="testSelectCarDetails"/>
+          <include name="testHealthInsurance"/>
+          <include name="testCoupleChildrenAgeGapLess18"/>
           <include name="initPages"/>
-          <include name="testNavigateToCarInsurance"/>
-          <include name="testReviewAndProceed"/>
-          <include name="testEnterPincodeAndProceed"/>
+          <include name="testEditMemberDetailsButton"/>
         </methods>
-      </class> <!-- testcases.TestCarInsurance -->
+      </class> <!-- testcases.TestHealthInsurance -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

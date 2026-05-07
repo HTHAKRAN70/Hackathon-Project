@@ -3,20 +3,21 @@ package base;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import config.ConfigReader;
-import utils.DriverFactory;
+public class BaseTest extends BasePage {
 
-public class BaseTest {
+    public  WebDriver driver;
 
-    public WebDriver driver;
-
-    @BeforeTest
+    @BeforeClass
     public void setUp() {
-        DriverFactory.initDriver();
-        driver = DriverFactory.getDriver();
+
+        String browserName = ConfigReader.getProperty("browser");
+
+        driver = setupDriver(browserName);
+
 
         int timeout = Integer.parseInt(ConfigReader.getProperty("timeout"));
         driver.manage().deleteAllCookies();
@@ -26,8 +27,16 @@ public class BaseTest {
         driver.get(ConfigReader.getProperty("url"));
     }
 
-    @AfterTest
+
+    public WebDriver getDriver(){
+    	return driver;
+    } 
+    
+    @AfterClass
     public void tearDown() {
-        DriverFactory.quitDriver();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
+

@@ -1,41 +1,16 @@
 package utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+
 public class WaitUtils {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    public static WebElement waitForVisibility(WebDriver driver, By locator) {
+        return new WebDriverWait(driver, Duration.ofSeconds(15))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
 
-    public WaitUtils(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
-
-    public WaitUtils(WebDriver driver, long timeoutInSeconds) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-    }
-
-    public WebElement waitForVisibility(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    public WebElement waitForClickability(By locator) {
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
-    public void hardWait(long millis) {
-        try {
-            Thread.sleep(millis);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
     }
 }

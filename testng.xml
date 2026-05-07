@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Insurance Automation Suite" verbose="2">
-
-    <listeners>
+<?xml version="1.0" encoding ="UTF-8"?>
+<suite name="Insuranve Website automation" >
+	<listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>
 
-    <test name="Health Insurance Test">
+    <test name="End to End Flow">
+    <parameter name="browser" value="chrome" />
         <classes>
             <class name="testcases.TestHealthInsurance"/>
-        </classes>
-    </test>
-
-    <test name="Car Insurance Test">
-        <classes>
+            <class name="testcases.TestComplaintFlow"/>
             <class name="testcases.TestCarInsurance"/>
+            <class name="testcases.TestBikeInsurance"/>
         </classes>
     </test>
 

@@ -1,46 +1,48 @@
 package utils;
 
+
+import java.util.Collections;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
-import config.ConfigReader;
-
-import java.time.Duration;
 
 public class DriverFactory {
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    public WebDriver initDriver(String browserName) {
+        WebDriver driver = null;
+        System.out.println("Launching browser: " + browserName);
 
-    public static WebDriver getDriver() {
-        if (driver.get() == null) {
-            initDriver();
+        if (browserName.equalsIgnoreCase("chrome")) {
+            
+            ChromeOptions options = new ChromeOptions();
+            
+            // Your required stealth/disable settings
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-notifications");
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+            options.setExperimentalOption("useAutomationExtension", false);
+            
+            driver = new ChromeDriver();
+
+        } else if (browserName.equalsIgnoreCase("edge")) {
+            
+            EdgeOptions options = new EdgeOptions();
+            
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-notifications");
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            
+            driver = new EdgeDriver(options);
+        } else {
+            System.out.println("Browser " + browserName + " is not supported.");
         }
-        return driver.get();
-    }
 
-    public static void initDriver() {
-        String browser = ConfigReader.getProperty("browser");
-        WebDriver webDriver;
-
-        switch (browser.toLowerCase()) {
-            case "chrome":
-            default:
-                webDriver = new ChromeDriver();
-                break;
-        }
-
-        webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(
-            Duration.ofSeconds(Long.parseLong(ConfigReader.getProperty("implicit.wait")))
-        );
-
-        driver.set(webDriver);
-    }
-
-    public static void quitDriver() {
-        if (driver.get() != null) {
-            driver.get().quit();
-            driver.remove();
-        }
+        return driver;
     }
 }
+
