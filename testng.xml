@@ -1,20 +1,21 @@
-<?xml version="1.0" encoding ="UTF-8"?>
-<suite name="Insuranve Website automation" >
-	<listeners>
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Insurance Website Automation"
+       parallel="classes"
+       thread-count="5">
+
+    <listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>
 
     <test name="End to End Flow">
-    <parameter name="browser" value="chrome" />
+        <parameter name="browser" value="chrome"/>
+
         <classes>
             <class name="testcases.TestHealthInsurance"/>
             <class name="testcases.TestComplaintFlow"/>
             <class name="testcases.TestCarInsurance"/>
             <class name="testcases.TestBikeInsurance"/>
-<<<<<<< HEAD
             <class name="testcases.TestBusinessInsurance"/>
-=======
->>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
         </classes>
     </test>
 
