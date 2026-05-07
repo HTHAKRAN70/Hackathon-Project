@@ -142,7 +142,9 @@ public class TestHealthInsurance extends BaseTest {
         softAssert.assertTrue(allPlans.size() > 0, "Plans list is empty");
         softAssert.assertAll();
 
+
     }
  
 
 }
+

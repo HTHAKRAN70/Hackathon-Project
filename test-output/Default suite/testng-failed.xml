@@ -6,8 +6,8 @@
       <class name="testcases.TestBikeInsurance">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="testNavigationToBikeSection"/>
+          <include name="tearDown"/>
           <include name="initPages"/>
           <include name="testTriggerPlanDetailsOverlay"/>
           <include name="testResultsPageAndPlanCount"/>

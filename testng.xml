@@ -9,6 +9,7 @@
         <classes>
             <class name="testcases.TestHealthInsurance"/>
             <class name="testcases.TestComplaintFlow"/>
+            <class name="testcases.TestBikeInsurance"/>
         </classes>
     </test>
 

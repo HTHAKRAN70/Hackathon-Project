@@ -7,18 +7,29 @@
   <test thread-count="5" name="End to End Flow(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.TestHealthInsurance">
+      <class name="testcases.TestBikeInsurance">
         <methods>
           <include name="setUp"/>
-          <include name="testWithoutSelectingAnyMember" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="testHealthInsurance"/>
-          <include name="testWithoutPinCode"/>
-          <include name="testCoupleChildrenAgeGapLess18"/>
+          <include name="testNavigationToBikeSection"/>
           <include name="initPages"/>
-          <include name="testEditMemberDetailsButton"/>
+          <include name="testTriggerPlanDetailsOverlay"/>
+          <include name="testResultsPageAndPlanCount"/>
+          <include name="testVehicleManualSelection"/>
+          <include name="testRegistrationErrorValidation"/>
         </methods>
-      </class> <!-- testcases.TestHealthInsurance -->
+      </class> <!-- testcases.TestBikeInsurance -->
+      <class name="testcases.TestComplaintFlow">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="invalidPhoneNumberTest"/>
+          <include name="invalidEmailTest"/>
+          <include name="missingPolicyIdTest"/>
+          <include name="validateContactUsPage"/>
+          <include name="successfulSubmissionTest"/>
+        </methods>
+      </class> <!-- testcases.TestComplaintFlow -->
     </classes>
   </test> <!-- End to End Flow(failed) -->
 </suite> <!-- Failed suite [Insuranve Website automation] -->

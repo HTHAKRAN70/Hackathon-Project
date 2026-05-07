@@ -23,7 +23,7 @@ public class TestComplaintFlow extends BaseTest {
         contact.clickContactUs();
         String url = contact.getPageUrl();
         System.out.println("Url: " + url);
-        ScreenshotUtils.takeScreenshot(driver, "Image1");
+//        ScreenshotUtils.takeScreenshot(driver, "Image1");
         Assert.assertTrue(url.contains("https://www.coverfox.com/contact/"));
     }
     @Test(priority = 2)
@@ -34,7 +34,7 @@ public class TestComplaintFlow extends BaseTest {
         String actualError = page.getPhoneErrorMessage();
         String expectedError = "We can’t proceed without your mobile number or invalid mobile number. Help us?";
         Assert.assertEquals(actualError.trim(), expectedError);
-        ScreenshotUtils.takeScreenshot(driver, "Image2");
+//        ScreenshotUtils.takeScreenshot(driver, "Image2");
         System.out.println("Validation Passed - Invalid Phone Error Displayed"+actualError);
 
     }
@@ -48,7 +48,7 @@ public class TestComplaintFlow extends BaseTest {
                 successMsg.contains("THANK YOU"),
                 "Success message not displayed correctly"
         );
-        ScreenshotUtils.takeScreenshot(driver, "Image3");
+//        ScreenshotUtils.takeScreenshot(driver, "Image3");
         System.out.println("Form submitted successfully without Policy Id"+successMsg);
     }
     @Test(priority = 4)
@@ -63,7 +63,7 @@ public class TestComplaintFlow extends BaseTest {
                 successMsg.contains("THANK YOU"),
                 "Success message not displayed correctly"
         );
-        ScreenshotUtils.takeScreenshot(driver, "Image4");
+//        ScreenshotUtils.takeScreenshot(driver, "Image4");
         System.out.println("Form submitted successfully"+successMsg);
     }
     @Test(priority = 5)
@@ -77,7 +77,7 @@ public class TestComplaintFlow extends BaseTest {
                 actualError.contains(expectedText),
                 "Email validation message not displayed correctly"
         );
-        ScreenshotUtils.takeScreenshot(driver, "Image5");
+//        ScreenshotUtils.takeScreenshot(driver, "Image5");
         System.out.println("Invalid email validation passed: "+actualError);
 
     }
