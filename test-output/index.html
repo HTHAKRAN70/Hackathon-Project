@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\2478754\AppData\Local\Temp\testng-eclipse-943529511\testng-customsuite.xml</span>
+                    <span>C:\Users\2478646\AppData\Local\Temp\testng-eclipse--15737041\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,  1 skipped,  3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testcases.TestHealthInsurance" class="method navigator-link" hash-for-method="testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)">testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Default_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testcases.TestHealthInsurance" class="method navigator-link" hash-for-method="testHealthInsurance">testHealthInsurance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,16 +132,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="testcases.TestHealthInsurance" class="method navigator-link" hash-for-method="testCoupleChildrenAgeGapLess18(18, 18, 0, 11m,11m,4y, 35, 35, Your kid has to be atleast 18 years younger than you and spouse)">testCoupleChildrenAgeGapLess18(18, 18, 0, 11m,11m,4y, 35, 35, Your kid has to be atleast 18 years younger than you and spouse)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testcases.TestHealthInsurance" class="method navigator-link" hash-for-method="testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)">testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testcases.TestHealthInsurance" class="method navigator-link" hash-for-method="testHealthInsurance(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580)">testHealthInsurance(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,6 +156,113 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TestHealthInsurance</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)">
+                  </a> <!-- testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/) -->
+                  <span class="method-name">testEditMemberDetailsButton</span>
+                  <span class="parameters">(25,25,0,4m,4y,4m,70,70,251201,251201,7017583580,https://www.coverfox.com/health-plan/)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mb__action-box&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9309c5f08ca404a9f32bc1779186b5ca, findElement {value=//div[@class=&apos;mb__action-box&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2478646\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49859}, goog:processID: 25060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49859/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9309c5f08ca404a9f32bc1779186b5ca
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pages.HealthInsuranceResultPage.getViewMemberDetailsButton(HealthInsuranceResultPage.java:134)
+	at testcases.TestHealthInsurance.testEditMemberDetailsButton(TestHealthInsurance.java:122)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testcases.TestHealthInsurance</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHealthInsurance">
+                  </a> <!-- testHealthInsurance -->
+                  <span class="method-name">testHealthInsurance</span>
+                  <div class="stack-trace">java.lang.Throwable: Method testcases.TestHealthInsurance.testHealthInsurance() on instance testcases.TestHealthInsurance@4c178a76 depends on not successfully finished methods 
+[testcases.TestHealthInsurance.testEditMemberDetailsButton() on instance testcases.TestHealthInsurance@4c178a76]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -150,22 +275,6 @@
                   </a> <!-- testCoupleChildrenAgeGapLess18(18, 18, 0, 11m,11m,4y, 35, 35, Your kid has to be atleast 18 years younger than you and spouse) -->
                   <span class="method-name">testCoupleChildrenAgeGapLess18</span>
                   <span class="parameters">(18,18,0,11m,11m,4y,35,35,Your kid has to be atleast 18 years younger than you and spouse)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)">
-                  </a> <!-- testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/) -->
-                  <span class="method-name">testEditMemberDetailsButton</span>
-                  <span class="parameters">(25,25,0,4m,4y,4m,70,70,251201,251201,7017583580,https://www.coverfox.com/health-plan/)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testHealthInsurance(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580)">
-                  </a> <!-- testHealthInsurance(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580) -->
-                  <span class="method-name">testHealthInsurance</span>
-                  <span class="parameters">(25,25,0,4m,4y,4m,70,70,251201,251201,7017583580)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -189,7 +298,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\2478754\AppData\Local\Temp\testng-eclipse-943529511\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\2478646\AppData\Local\Temp\testng-eclipse--15737041\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -240,30 +349,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testHealthInsurance')
+data.setCell(0, 1, 'testCoupleChildrenAgeGapLess18')
 data.setCell(0, 2, 'testcases.TestHealthInsurance')
-data.setCell(0, 3, 19370);
+data.setCell(0, 3, 5397);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testCoupleChildrenAgeGapLess18')
+data.setCell(1, 1, 'testWithoutPinCode')
 data.setCell(1, 2, 'testcases.TestHealthInsurance')
-data.setCell(1, 3, 6793);
+data.setCell(1, 3, 2426);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testWithoutSelectingAnyMember')
 data.setCell(2, 2, 'testcases.TestHealthInsurance')
-data.setCell(2, 3, 3316);
+data.setCell(2, 3, 1541);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testWithoutPinCode')
+data.setCell(3, 1, 'testEditMemberDetailsButton')
 data.setCell(3, 2, 'testcases.TestHealthInsurance')
-data.setCell(3, 3, 3177);
+data.setCell(3, 3, 490);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testEditMemberDetailsButton')
+data.setCell(4, 1, 'testHealthInsurance')
 data.setCell(4, 2, 'testcases.TestHealthInsurance')
-data.setCell(4, 3, 1874);
+data.setCell(4, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -290,54 +399,48 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TestHealthInsurance</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setUp</span>
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">8312 ms</span>
+                <span class="method-start">10341 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testWithoutSelectingAnyMember(* Select one or more members to continue)</span>
-                <span class="method-start">8348 ms</span>
+                <span class="method-start">10475 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPages</span>
+                <span class="method-start">12029 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCoupleChildrenAgeGapLess18(18, 18, 0, 11m,11m,4y, 35, 35, Your kid has to be atleast 18 years younger than you and spouse)</span>
-                <span class="method-start">11685 ms</span>
+                <span class="method-start">12029 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">11685 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">18491 ms</span>
+                <span class="method-start">17431 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testWithoutPinCode(25, 25, 0, 4m,4y,4m, 70, 70, 251201, , 7017583580, Please enter a valid pincode)</span>
-                <span class="method-start">18494 ms</span>
+                <span class="method-start">17433 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">21685 ms</span>
+                <span class="method-start">19864 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)</span>
-                <span class="method-start">21689 ms</span>
+                <span class="method-start">19865 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">23563 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testHealthInsurance(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580)</span>
-                <span class="method-start">23575 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
+              <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42954 ms</span>
-              </div> <!-- configuration-test after -->
+                <span class="method-start">20372 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

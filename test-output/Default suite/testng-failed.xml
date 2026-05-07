@@ -6,13 +6,13 @@
       <class name="testcases.TestHealthInsurance">
         <methods>
           <include name="testWithoutSelectingAnyMember"/>
-          <include name="setUp"/>
+          <include name="setup"/>
           <include name="tearDown"/>
+          <include name="testHealthInsurance"/>
           <include name="testWithoutPinCode"/>
-          <include name="testHealthInsurance" invocation-numbers="1"/>
           <include name="testCoupleChildrenAgeGapLess18"/>
           <include name="initPages"/>
-          <include name="testEditMemberDetailsButton"/>
+          <include name="testEditMemberDetailsButton" invocation-numbers="0"/>
         </methods>
       </class> <!-- testcases.TestHealthInsurance -->
     </classes>
