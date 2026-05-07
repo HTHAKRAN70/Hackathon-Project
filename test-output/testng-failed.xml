@@ -22,15 +22,46 @@
       <class name="testcases.TestBusinessInsurance">
         <methods>
           <include name="setUp"/>
+<<<<<<< HEAD
           <include name="tearDown"/>
           <include name="testWorkerDetailsAndProceed"/>
           <include name="testIndustrySelectionValidation"/>
           <include name="testValidDetailsSubmission"/>
           <include name="testSubmitWithoutDetails"/>
+=======
+<<<<<<< HEAD
+          <include name="testWithoutPinCode"/>
+          <include name="tearDown"/>
+          <include name="testHealthInsurance"/>
+          <include name="testCoupleChildrenAgeGapLess18"/>
+=======
+          <include name="tearDown"/>
+          <include name="testNavigationToBikeSection"/>
+>>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
           <include name="initPages"/>
           <include name="testWorkmenCompensationOpensInNewTab"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- testcases.TestBusinessInsurance -->
+=======
+<<<<<<< HEAD
+      </class> <!-- testcases.TestHealthInsurance -->
+=======
+      </class> <!-- testcases.TestBikeInsurance -->
+      <class name="testcases.TestComplaintFlow">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="invalidPhoneNumberTest"/>
+          <include name="invalidEmailTest"/>
+          <include name="missingPolicyIdTest"/>
+          <include name="validateContactUsPage"/>
+          <include name="successfulSubmissionTest"/>
+        </methods>
+      </class> <!-- testcases.TestComplaintFlow -->
+>>>>>>> 21ab5f89f901363738ab7917328cfe6c64c73fb7
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
     </classes>
   </test> <!-- End to End Flow(failed) -->
 </suite> <!-- Failed suite [Insuranve Website automation] -->

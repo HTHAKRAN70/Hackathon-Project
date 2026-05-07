@@ -1,32 +1,3 @@
-//package utils;
-//
-//import com.aventstack.extentreports.ExtentReports;
-//import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-//
-//public class ExtentManager {
-//
-//    private static ExtentReports extent;
-//
-//    public static ExtentReports getExtent() {
-//
-//        if (extent == null) {
-//            ExtentSparkReporter reporter =
-//                new ExtentSparkReporter("reports/ExtentReport.html");
-//
-//            reporter.config().setReportName("Health Insurance Automation");
-//            reporter.config().setDocumentTitle("Test Results");
-//
-//            extent = new ExtentReports();
-//            extent.attachReporter(reporter);
-//
-//            extent.setSystemInfo("Framework", "Selenium + TestNG");
-//            extent.setSystemInfo("Author", "Automation Team");
-//        }
-//        return extent;
-//    }
-//}
-
-
 package utils;
 
 
@@ -41,24 +12,24 @@ public class ExtentManager {
 
     public static ExtentReports getExtent() {
 
-    	 if (extent == null) {
-         	File reportDir = new File("reports");
-         	if (!reportDir.exists()) reportDir.mkdirs();
+        if (extent == null) {
+        	File reportDir = new File("reports");
+        	if (!reportDir.exists()) reportDir.mkdirs();
 
-         	ExtentSparkReporter reporter =
-         	    new ExtentSparkReporter("reports/ExtentReport.html");
-             reporter.config().setReportName("Health Insurance Automation");
+        	ExtentSparkReporter reporter =
+        	    new ExtentSparkReporter("reports/ExtentReport.html");
+            reporter.config().setReportName("Health Insurance Automation");
 
-             reporter.config().setDocumentTitle("Test Results");
+            reporter.config().setDocumentTitle("Test Results");
 
-             extent = new ExtentReports();
-             extent.attachReporter(reporter);
+            extent = new ExtentReports();
+            extent.attachReporter(reporter);
 
-             extent.setSystemInfo("Framework", "Selenium + TestNG");
-             extent.setSystemInfo("Author", "Automation Team");
+            extent.setSystemInfo("Framework", "Selenium + TestNG");
+            extent.setSystemInfo("Author", "Automation Team");
 
-         }
-         return extent;
+        }
+        return extent;
 
     }
 }

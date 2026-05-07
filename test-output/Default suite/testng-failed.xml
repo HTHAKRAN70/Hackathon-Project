@@ -7,10 +7,18 @@
         <methods>
           <include name="testWithoutSelectingAnyMember"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="testHealthInsurance"/>
           <include name="testWithoutPinCode"/>
+=======
+          <include name="setUp"/>
+<<<<<<< HEAD
+          <include name="testWithoutPinCode"/>
+          <include name="tearDown"/>
+          <include name="testHealthInsurance"/>
+>>>>>>> 37a6ee50c1b7b6219824452cdbf201216cf92789
 =======
           <include name="setUp"/>
 <<<<<<< HEAD
