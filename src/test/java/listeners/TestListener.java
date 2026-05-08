@@ -37,6 +37,14 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
     	test.pass("Test Passed");
+
+    	 Object screenshotPath = result.getAttribute("SCREENSHOT_PATH");
+
+    	    if (screenshotPath != null) {
+    	        test.info("📸 Screenshot captured during validation")
+    	            .addScreenCaptureFromPath(screenshotPath.toString());
+    	    }
+
         write(result.getName(), "PASS");
     }
 
