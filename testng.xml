@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Insurance Website Automation"
-       parallel="classes"
-       thread-count="5">
-
+<suite name="Insurance Website Automation">
     <listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>
-
     <test name="End to End Flow">
         <parameter name="browser" value="chrome"/>
-
         <classes>
             <class name="testcases.TestHealthInsurance"/>
             <class name="testcases.TestComplaintFlow"/>

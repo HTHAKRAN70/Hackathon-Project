@@ -9,8 +9,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 
 import base.BaseTest;
 import pages.AddressPage;
@@ -18,7 +16,6 @@ import pages.AgePage;
 import pages.HealthInsuranceResultPage;
 import pages.HomePage;
 import pages.MembersPage;
-import utils.ExtentManager;
 import utils.ScreenshotUtils;
 
 
@@ -32,8 +29,7 @@ public class TestHealthInsurance extends BaseTest {
     HealthInsuranceResultPage result;
     WebDriverWait wait;
     SoftAssert softAssert;
-    private static ExtentReports extent = ExtentManager.getExtent();
-    private static ExtentTest test;
+    
 
 
     @BeforeClass
