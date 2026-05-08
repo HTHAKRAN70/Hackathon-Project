@@ -197,7 +197,7 @@ public class ExcelUtility {
 		filePath = ConfigReader.getExcelFilePath("write");
 		File file = new File(filePath);
  
-		if (file.exists()) {
+		if (!file.exists()) {
 			fis = new FileInputStream(file);
 			workbook = new XSSFWorkbook(fis);
  

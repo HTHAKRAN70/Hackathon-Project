@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Insurance Website Automation]">
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="End to End Flow(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.TestHealthInsurance">
+      <class name="testcases.TestBusinessInsurance">
         <methods>
-          <include name="testWithoutSelectingAnyMember" invocation-numbers="0"/>
           <include name="setUp"/>
-          <include name="testWithoutPinCode"/>
           <include name="tearDown"/>
-          <include name="testHealthInsurance"/>
-          <include name="testCoupleChildrenAgeGapLess18"/>
+          <include name="testWorkerDetailsAndProceed"/>
+          <include name="testIndustrySelectionValidation"/>
+          <include name="testValidDetailsSubmission"/>
+          <include name="testSubmitWithoutDetails"/>
           <include name="initPages"/>
-          <include name="testEditMemberDetailsButton"/>
+          <include name="testWorkmenCompensationOpensInNewTab"/>
         </methods>
-      </class> <!-- testcases.TestHealthInsurance -->
+      </class> <!-- testcases.TestBusinessInsurance -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- End to End Flow(failed) -->
+</suite> <!-- Failed suite [Insurance Website Automation] -->

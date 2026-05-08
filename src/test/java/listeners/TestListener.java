@@ -36,7 +36,7 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        BaseTest base = (BaseTest) result.getInstance();
+    	test.pass("Test Passed");
         write(result.getName(), "PASS");
     }
 
