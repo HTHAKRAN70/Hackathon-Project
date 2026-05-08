@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Insurance_Website_Automation" class="navigator-link">
-              <span class="suite-name border-passed">Insurance Website Automation</span>
+              <span class="suite-name border-failed">Insurance Website Automation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">25 methods,   25 passed</span>
+                    <span class="method-stats">25 methods, 1 failed,  4 skipped,  20 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Insurance_Website_Automation" class="hide-methods failed suite-Insurance_Website_Automation"> (hide)</a> <!-- hide-methods failed suite-Insurance_Website_Automation -->
+                      <a href="#" panel-name="suite-Insurance_Website_Automation" class="show-methods failed suite-Insurance_Website_Automation"> (show)</a> <!-- show-methods failed suite-Insurance_Website_Automation -->
+                    </span>
+                    <div class="method-list-content failed suite-Insurance_Website_Automation">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testWorkmenCompensationOpensInNewTab">testWorkmenCompensationOpensInNewTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Insurance_Website_Automation -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Insurance_Website_Automation" class="hide-methods skipped suite-Insurance_Website_Automation"> (hide)</a> <!-- hide-methods skipped suite-Insurance_Website_Automation -->
+                      <a href="#" panel-name="suite-Insurance_Website_Automation" class="show-methods skipped suite-Insurance_Website_Automation"> (show)</a> <!-- show-methods skipped suite-Insurance_Website_Automation -->
+                    </span>
+                    <div class="method-list-content skipped suite-Insurance_Website_Automation">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testIndustrySelectionValidation">testIndustrySelectionValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testSubmitWithoutDetails">testSubmitWithoutDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testValidDetailsSubmission">testValidDetailsSubmission</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testWorkerDetailsAndProceed">testWorkerDetailsAndProceed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Insurance_Website_Automation -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -143,11 +186,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testIndustrySelectionValidation">testIndustrySelectionValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestCarInsurance" class="method navigator-link" hash-for-method="testNavigateToCarInsurance">testNavigateToCarInsurance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -178,17 +216,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testSubmitWithoutDetails">testSubmitWithoutDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBikeInsurance" class="method navigator-link" hash-for-method="testTriggerPlanDetailsOverlay">testTriggerPlanDetailsOverlay</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testValidDetailsSubmission(9898989898, abc@gmail.com, ABC Constructions, 500097)">testValidDetailsSubmission(9898989898, abc@gmail.com, ABC Constructions, 500097)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -213,16 +241,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testWorkerDetailsAndProceed(20, 20000, 10, 12500, 5, 8000)">testWorkerDetailsAndProceed(20, 20000, 10, 12500, 5, 8000)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestBusinessInsurance" class="method navigator-link" hash-for-method="testWorkmenCompensationOpensInNewTab">testWorkmenCompensationOpensInNewTab</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Insurance_Website_Automation" title="testcases.TestComplaintFlow" class="method navigator-link" hash-for-method="validateContactUsPage">validateContactUsPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -238,45 +256,138 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Insurance_Website_Automation" class="panel Insurance_Website_Automation">
-          <div class="suite-Insurance_Website_Automation-class-passed">
+          <div class="suite-Insurance_Website_Automation-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.TestCarInsurance</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TestBusinessInsurance</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testEnterPincodeAndProceed">
-                  </a> <!-- testEnterPincodeAndProceed -->
-                  <span class="method-name">testEnterPincodeAndProceed</span>
+                  <a name="testWorkmenCompensationOpensInNewTab">
+                  </a> <!-- testWorkmenCompensationOpensInNewTab -->
+                  <span class="method-name">testWorkmenCompensationOpensInNewTab</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=146.0.7680.178)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5cd24316f2680dd54bc25da7f12a7618, getTitle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2478754\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53695}, goog:processID: 35712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53695/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5cd24316f2680dd54bc25da7f12a7618
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:305)
+	at testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab(TestBusinessInsurance.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Insurance_Website_Automation-class-failed -->
+          <div class="suite-Insurance_Website_Automation-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testcases.TestBusinessInsurance</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIndustrySelectionValidation">
+                  </a> <!-- testIndustrySelectionValidation -->
+                  <span class="method-name">testIndustrySelectionValidation</span>
+                  <div class="stack-trace">java.lang.Throwable: Method testcases.TestBusinessInsurance.testIndustrySelectionValidation() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testValidDetailsSubmission() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testNavigateToCarInsurance">
-                  </a> <!-- testNavigateToCarInsurance -->
-                  <span class="method-name">testNavigateToCarInsurance</span>
+                  <a name="testSubmitWithoutDetails">
+                  </a> <!-- testSubmitWithoutDetails -->
+                  <span class="method-name">testSubmitWithoutDetails</span>
+                  <div class="stack-trace">java.lang.Throwable: Method testcases.TestBusinessInsurance.testSubmitWithoutDetails() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testReviewAndProceed">
-                  </a> <!-- testReviewAndProceed -->
-                  <span class="method-name">testReviewAndProceed</span>
+                  <a name="testValidDetailsSubmission">
+                  </a> <!-- testValidDetailsSubmission -->
+                  <span class="method-name">testValidDetailsSubmission</span>
+                  <div class="stack-trace">java.lang.Throwable: Method testcases.TestBusinessInsurance.testValidDetailsSubmission() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testSubmitWithoutDetails() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testSelectCarDetails">
-                  </a> <!-- testSelectCarDetails -->
-                  <span class="method-name">testSelectCarDetails</span>
+                  <a name="testWorkerDetailsAndProceed">
+                  </a> <!-- testWorkerDetailsAndProceed -->
+                  <span class="method-name">testWorkerDetailsAndProceed</span>
+                  <div class="stack-trace">java.lang.Throwable: Method testcases.TestBusinessInsurance.testWorkerDetailsAndProceed() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testIndustrySelectionValidation() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Insurance_Website_Automation-class-skipped -->
+          <div class="suite-Insurance_Website_Automation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TestBikeInsurance</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavigationToBikeSection">
+                  </a> <!-- testNavigationToBikeSection -->
+                  <span class="method-name">testNavigationToBikeSection</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testVerifyPlansAndDetails">
-                  </a> <!-- testVerifyPlansAndDetails -->
-                  <span class="method-name">testVerifyPlansAndDetails</span>
+                  <a name="testRegistrationErrorValidation">
+                  </a> <!-- testRegistrationErrorValidation -->
+                  <span class="method-name">testRegistrationErrorValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testResultsPageAndPlanCount">
+                  </a> <!-- testResultsPageAndPlanCount -->
+                  <span class="method-name">testResultsPageAndPlanCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTriggerPlanDetailsOverlay">
+                  </a> <!-- testTriggerPlanDetailsOverlay -->
+                  <span class="method-name">testTriggerPlanDetailsOverlay</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testVehicleManualSelection">
+                  </a> <!-- testVehicleManualSelection -->
+                  <span class="method-name">testVehicleManualSelection</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -332,42 +443,42 @@
           <div class="suite-Insurance_Website_Automation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.TestBikeInsurance</span>
+              <span class="class-name">testcases.TestCarInsurance</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testNavigationToBikeSection">
-                  </a> <!-- testNavigationToBikeSection -->
-                  <span class="method-name">testNavigationToBikeSection</span>
+                  <a name="testEnterPincodeAndProceed">
+                  </a> <!-- testEnterPincodeAndProceed -->
+                  <span class="method-name">testEnterPincodeAndProceed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testRegistrationErrorValidation">
-                  </a> <!-- testRegistrationErrorValidation -->
-                  <span class="method-name">testRegistrationErrorValidation</span>
+                  <a name="testNavigateToCarInsurance">
+                  </a> <!-- testNavigateToCarInsurance -->
+                  <span class="method-name">testNavigateToCarInsurance</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testResultsPageAndPlanCount">
-                  </a> <!-- testResultsPageAndPlanCount -->
-                  <span class="method-name">testResultsPageAndPlanCount</span>
+                  <a name="testReviewAndProceed">
+                  </a> <!-- testReviewAndProceed -->
+                  <span class="method-name">testReviewAndProceed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testTriggerPlanDetailsOverlay">
-                  </a> <!-- testTriggerPlanDetailsOverlay -->
-                  <span class="method-name">testTriggerPlanDetailsOverlay</span>
+                  <a name="testSelectCarDetails">
+                  </a> <!-- testSelectCarDetails -->
+                  <span class="method-name">testSelectCarDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testVehicleManualSelection">
-                  </a> <!-- testVehicleManualSelection -->
-                  <span class="method-name">testVehicleManualSelection</span>
+                  <a name="testVerifyPlansAndDetails">
+                  </a> <!-- testVerifyPlansAndDetails -->
+                  <span class="method-name">testVerifyPlansAndDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -411,51 +522,6 @@
                   <a name="validateContactUsPage">
                   </a> <!-- validateContactUsPage -->
                   <span class="method-name">validateContactUsPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Insurance_Website_Automation-class-passed -->
-          <div class="suite-Insurance_Website_Automation-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.TestBusinessInsurance</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testIndustrySelectionValidation">
-                  </a> <!-- testIndustrySelectionValidation -->
-                  <span class="method-name">testIndustrySelectionValidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSubmitWithoutDetails">
-                  </a> <!-- testSubmitWithoutDetails -->
-                  <span class="method-name">testSubmitWithoutDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testValidDetailsSubmission(9898989898, abc@gmail.com, ABC Constructions, 500097)">
-                  </a> <!-- testValidDetailsSubmission(9898989898, abc@gmail.com, ABC Constructions, 500097) -->
-                  <span class="method-name">testValidDetailsSubmission</span>
-                  <span class="parameters">(9898989898,abc@gmail.com,ABC Constructions,500097)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testWorkerDetailsAndProceed(20, 20000, 10, 12500, 5, 8000)">
-                  </a> <!-- testWorkerDetailsAndProceed(20, 20000, 10, 12500, 5, 8000) -->
-                  <span class="method-name">testWorkerDetailsAndProceed</span>
-                  <span class="parameters">(20,20000,10,12500,5,8000)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testWorkmenCompensationOpensInNewTab">
-                  </a> <!-- testWorkmenCompensationOpensInNewTab -->
-                  <span class="method-name">testWorkmenCompensationOpensInNewTab</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -524,108 +590,108 @@ data.addRows(25);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testHealthInsurance')
 data.setCell(0, 2, 'testcases.TestHealthInsurance')
-data.setCell(0, 3, 25850);
+data.setCell(0, 3, 18636);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testIndustrySelectionValidation')
+data.setCell(1, 1, 'testWorkmenCompensationOpensInNewTab')
 data.setCell(1, 2, 'testcases.TestBusinessInsurance')
-data.setCell(1, 3, 14848);
+data.setCell(1, 3, 15435);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testWorkerDetailsAndProceed')
-data.setCell(2, 2, 'testcases.TestBusinessInsurance')
-data.setCell(2, 3, 14297);
+data.setCell(2, 1, 'validateContactUsPage')
+data.setCell(2, 2, 'testcases.TestComplaintFlow')
+data.setCell(2, 3, 5254);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testWorkmenCompensationOpensInNewTab')
-data.setCell(3, 2, 'testcases.TestBusinessInsurance')
-data.setCell(3, 3, 13242);
+data.setCell(3, 1, 'testCoupleChildrenAgeGapLess18')
+data.setCell(3, 2, 'testcases.TestHealthInsurance')
+data.setCell(3, 3, 4976);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testCoupleChildrenAgeGapLess18')
-data.setCell(4, 2, 'testcases.TestHealthInsurance')
-data.setCell(4, 3, 7120);
+data.setCell(4, 1, 'testVerifyPlansAndDetails')
+data.setCell(4, 2, 'testcases.TestCarInsurance')
+data.setCell(4, 3, 3749);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'invalidPhoneNumberTest')
-data.setCell(5, 2, 'testcases.TestComplaintFlow')
-data.setCell(5, 3, 5066);
+data.setCell(5, 1, 'testResultsPageAndPlanCount')
+data.setCell(5, 2, 'testcases.TestBikeInsurance')
+data.setCell(5, 3, 3224);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testVerifyPlansAndDetails')
+data.setCell(6, 1, 'testSelectCarDetails')
 data.setCell(6, 2, 'testcases.TestCarInsurance')
-data.setCell(6, 3, 5054);
+data.setCell(6, 3, 3022);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'missingPolicyIdTest')
-data.setCell(7, 2, 'testcases.TestComplaintFlow')
-data.setCell(7, 3, 4750);
+data.setCell(7, 1, 'testWithoutSelectingAnyMember')
+data.setCell(7, 2, 'testcases.TestHealthInsurance')
+data.setCell(7, 3, 2498);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testValidDetailsSubmission')
-data.setCell(8, 2, 'testcases.TestBusinessInsurance')
-data.setCell(8, 3, 4516);
+data.setCell(8, 1, 'testRegistrationErrorValidation')
+data.setCell(8, 2, 'testcases.TestBikeInsurance')
+data.setCell(8, 3, 2187);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'invalidEmailTest')
+data.setCell(9, 1, 'invalidPhoneNumberTest')
 data.setCell(9, 2, 'testcases.TestComplaintFlow')
-data.setCell(9, 3, 4475);
+data.setCell(9, 3, 1997);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'successfulSubmissionTest')
+data.setCell(10, 1, 'missingPolicyIdTest')
 data.setCell(10, 2, 'testcases.TestComplaintFlow')
-data.setCell(10, 3, 4354);
+data.setCell(10, 3, 1899);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testSelectCarDetails')
-data.setCell(11, 2, 'testcases.TestCarInsurance')
-data.setCell(11, 3, 4128);
+data.setCell(11, 1, 'testWithoutPinCode')
+data.setCell(11, 2, 'testcases.TestHealthInsurance')
+data.setCell(11, 3, 1809);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testResultsPageAndPlanCount')
-data.setCell(12, 2, 'testcases.TestBikeInsurance')
-data.setCell(12, 3, 4093);
+data.setCell(12, 1, 'successfulSubmissionTest')
+data.setCell(12, 2, 'testcases.TestComplaintFlow')
+data.setCell(12, 3, 1691);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testWithoutSelectingAnyMember')
-data.setCell(13, 2, 'testcases.TestHealthInsurance')
-data.setCell(13, 3, 3495);
+data.setCell(13, 1, 'invalidEmailTest')
+data.setCell(13, 2, 'testcases.TestComplaintFlow')
+data.setCell(13, 3, 1668);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testWithoutPinCode')
-data.setCell(14, 2, 'testcases.TestHealthInsurance')
-data.setCell(14, 3, 3465);
+data.setCell(14, 1, 'testVehicleManualSelection')
+data.setCell(14, 2, 'testcases.TestBikeInsurance')
+data.setCell(14, 3, 1488);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testEditMemberDetailsButton')
-data.setCell(15, 2, 'testcases.TestHealthInsurance')
-data.setCell(15, 3, 3128);
+data.setCell(15, 1, 'testReviewAndProceed')
+data.setCell(15, 2, 'testcases.TestCarInsurance')
+data.setCell(15, 3, 1429);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testSubmitWithoutDetails')
-data.setCell(16, 2, 'testcases.TestBusinessInsurance')
-data.setCell(16, 3, 2680);
+data.setCell(16, 1, 'testNavigateToCarInsurance')
+data.setCell(16, 2, 'testcases.TestCarInsurance')
+data.setCell(16, 3, 1267);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'validateContactUsPage')
-data.setCell(17, 2, 'testcases.TestComplaintFlow')
-data.setCell(17, 3, 2646);
+data.setCell(17, 1, 'testEditMemberDetailsButton')
+data.setCell(17, 2, 'testcases.TestHealthInsurance')
+data.setCell(17, 3, 1191);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'testRegistrationErrorValidation')
-data.setCell(18, 2, 'testcases.TestBikeInsurance')
-data.setCell(18, 3, 2367);
+data.setCell(18, 1, 'testEnterPincodeAndProceed')
+data.setCell(18, 2, 'testcases.TestCarInsurance')
+data.setCell(18, 3, 1154);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'testVehicleManualSelection')
+data.setCell(19, 1, 'testNavigationToBikeSection')
 data.setCell(19, 2, 'testcases.TestBikeInsurance')
-data.setCell(19, 3, 2303);
+data.setCell(19, 3, 722);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'testReviewAndProceed')
-data.setCell(20, 2, 'testcases.TestCarInsurance')
-data.setCell(20, 3, 2224);
+data.setCell(20, 1, 'testTriggerPlanDetailsOverlay')
+data.setCell(20, 2, 'testcases.TestBikeInsurance')
+data.setCell(20, 3, 85);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'testNavigateToCarInsurance')
-data.setCell(21, 2, 'testcases.TestCarInsurance')
-data.setCell(21, 3, 1629);
+data.setCell(21, 1, 'testWorkerDetailsAndProceed')
+data.setCell(21, 2, 'testcases.TestBusinessInsurance')
+data.setCell(21, 3, 1);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'testEnterPincodeAndProceed')
-data.setCell(22, 2, 'testcases.TestCarInsurance')
-data.setCell(22, 3, 1408);
+data.setCell(22, 1, 'testIndustrySelectionValidation')
+data.setCell(22, 2, 'testcases.TestBusinessInsurance')
+data.setCell(22, 3, 0);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'testNavigationToBikeSection')
-data.setCell(23, 2, 'testcases.TestBikeInsurance')
-data.setCell(23, 3, 724);
+data.setCell(23, 1, 'testValidDetailsSubmission')
+data.setCell(23, 2, 'testcases.TestBusinessInsurance')
+data.setCell(23, 3, 0);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'testTriggerPlanDetailsOverlay')
-data.setCell(24, 2, 'testcases.TestBikeInsurance')
-data.setCell(24, 3, 107);
+data.setCell(24, 1, 'testSubmitWithoutDetails')
+data.setCell(24, 2, 'testcases.TestBusinessInsurance')
+data.setCell(24, 3, 0);
 window.suiteTableData['Insurance_Website_Automation']= { tableData: data, tableDiv: 'times-div-Insurance_Website_Automation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Insurance_Website_Automation">
               </div> <!-- times-div-Insurance_Website_Automation -->
             </div> <!-- times-div -->
@@ -658,199 +724,169 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">8953 ms</span>
+                <span class="method-start">7108 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testWithoutSelectingAnyMember(* Select one or more members to continue)</span>
-                <span class="method-start">9040 ms</span>
+                <span class="method-start">7157 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCoupleChildrenAgeGapLess18(18, 18, 0, 11m,11m,4y, 35, 35, Your kid has to be atleast 18 years younger than you and spouse)</span>
-                <span class="method-start">13151 ms</span>
+                <span class="method-start">10000 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testWithoutPinCode(25, 25, 0, 4m,4y,4m, 70, 70, 251201, , 7017583580, Please enter a valid pincode)</span>
-                <span class="method-start">20339 ms</span>
+                <span class="method-start">15020 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testEditMemberDetailsButton(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580, https://www.coverfox.com/health-plan/)</span>
-                <span class="method-start">23863 ms</span>
+                <span class="method-start">16876 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testHealthInsurance(25, 25, 0, 4m,4y,4m, 70, 70, 251201, 251201, 7017583580)</span>
-                <span class="method-start">27054 ms</span>
+                <span class="method-start">18102 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">52966 ms</span>
+                <span class="method-start">36785 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TestComplaintFlow</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">60944 ms</span>
+                <span class="method-start">44761 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validateContactUsPage</span>
-                <span class="method-start">68125 ms</span>
+                <span class="method-start">54706 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">invalidPhoneNumberTest</span>
-                <span class="method-start">70822 ms</span>
+                <span class="method-start">60007 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">missingPolicyIdTest</span>
-                <span class="method-start">75938 ms</span>
+                <span class="method-start">62039 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">successfulSubmissionTest</span>
-                <span class="method-start">80737 ms</span>
+                <span class="method-start">63975 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">invalidEmailTest</span>
-                <span class="method-start">85129 ms</span>
+                <span class="method-start">65697 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">89663 ms</span>
+                <span class="method-start">67406 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TestCarInsurance</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">98717 ms</span>
+                <span class="method-start">73667 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">107239 ms</span>
+                <span class="method-start">79958 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testNavigateToCarInsurance</span>
-                <span class="method-start">107252 ms</span>
+                <span class="method-start">79963 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testEnterPincodeAndProceed</span>
-                <span class="method-start">108964 ms</span>
+                <span class="method-start">81257 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSelectCarDetails</span>
-                <span class="method-start">110425 ms</span>
+                <span class="method-start">82438 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testReviewAndProceed</span>
-                <span class="method-start">114603 ms</span>
+                <span class="method-start">85507 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testVerifyPlansAndDetails</span>
-                <span class="method-start">116886 ms</span>
+                <span class="method-start">86984 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">121988 ms</span>
+                <span class="method-start">90768 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TestBikeInsurance</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">128586 ms</span>
+                <span class="method-start">97253 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">136640 ms</span>
+                <span class="method-start">103552 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testNavigationToBikeSection</span>
-                <span class="method-start">136654 ms</span>
+                <span class="method-start">103565 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">137419 ms</span>
+                <span class="method-start">104314 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testRegistrationErrorValidation</span>
-                <span class="method-start">137419 ms</span>
+                <span class="method-start">104316 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">139833 ms</span>
+                <span class="method-start">106540 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testVehicleManualSelection</span>
-                <span class="method-start">139835 ms</span>
+                <span class="method-start">106541 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">142188 ms</span>
+                <span class="method-start">108087 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testResultsPageAndPlanCount</span>
-                <span class="method-start">142188 ms</span>
+                <span class="method-start">108088 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">146317 ms</span>
+                <span class="method-start">111341 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testTriggerPlanDetailsOverlay</span>
-                <span class="method-start">146319 ms</span>
+                <span class="method-start">111341 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">146464 ms</span>
+                <span class="method-start">111467 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TestBusinessInsurance</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">152550 ms</span>
+                <span class="method-start">117216 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">162642 ms</span>
+                <span class="method-start">124687 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testWorkmenCompensationOpensInNewTab</span>
-                <span class="method-start">162656 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">175929 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSubmitWithoutDetails</span>
-                <span class="method-start">175938 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testValidDetailsSubmission(9898989898, abc@gmail.com, ABC Constructions, 500097)</span>
-                <span class="method-start">178668 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">178668 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">183244 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testIndustrySelectionValidation</span>
-                <span class="method-start">183246 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">198137 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testWorkerDetailsAndProceed(20, 20000, 10, 12500, 5, 8000)</span>
-                <span class="method-start">198137 ms</span>
+                <span class="method-start">124696 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">212484 ms</span>
+                <span class="method-start">140457 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

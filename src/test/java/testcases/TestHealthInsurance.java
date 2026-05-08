@@ -97,7 +97,7 @@ public class TestHealthInsurance extends BaseTest {
 	
 	    // ✅ STORE IT IN TEST RESULT (NO EXTENT HERE)
 	    org.testng.Reporter.getCurrentTestResult()
-	            .setAttribute("testWithoutSelectingAnyMember", screenshotPath);
+	            .setAttribute("SCREENSHOT_PATH", screenshotPath);
 
         
     }
@@ -145,7 +145,7 @@ public class TestHealthInsurance extends BaseTest {
 	
 	    // ✅ STORE IT IN TEST RESULT (NO EXTENT HERE)
 	    org.testng.Reporter.getCurrentTestResult()
-	            .setAttribute("testWithoutPinCode", screenshotPath);
+	            .setAttribute("SCREENSHOT_PATH", screenshotPath);
 
         
     }

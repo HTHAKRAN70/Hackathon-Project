@@ -1,189 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="25" passed="25" failed="0" skipped="0">
+<testng-results ignored="0" total="25" passed="20" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-08T11:27:20 IST" name="Insurance Website Automation" finished-at="2026-05-08T11:31:03 IST" duration-ms="222151">
+  <suite started-at="2026-05-08T16:06:34 IST" name="Insurance Website Automation" finished-at="2026-05-08T16:09:01 IST" duration-ms="147085">
     <groups>
     </groups>
-    <test started-at="2026-05-08T11:27:20 IST" name="End to End Flow" finished-at="2026-05-08T11:31:03 IST" duration-ms="222151">
+    <test started-at="2026-05-08T16:06:34 IST" name="End to End Flow" finished-at="2026-05-08T16:09:01 IST" duration-ms="147085">
       <class name="testcases.TestCarInsurance">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:00 IST" name="setUp" finished-at="2026-05-08T11:29:08 IST" duration-ms="8522" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:07:49 IST" name="setUp" finished-at="2026-05-08T16:07:55 IST" duration-ms="6291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:08 IST" name="initPages" finished-at="2026-05-08T11:29:08 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:07:55 IST" name="initPages" finished-at="2026-05-08T16:07:55 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testNavigateToCarInsurance()[pri:1, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:08 IST" name="testNavigateToCarInsurance" finished-at="2026-05-08T11:29:10 IST" duration-ms="1629" status="PASS">
+        <test-method signature="testNavigateToCarInsurance()[pri:1, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:07:55 IST" name="testNavigateToCarInsurance" finished-at="2026-05-08T16:07:56 IST" duration-ms="1267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNavigateToCarInsurance -->
-        <test-method signature="testEnterPincodeAndProceed()[pri:2, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:10 IST" name="testEnterPincodeAndProceed" finished-at="2026-05-08T11:29:12 IST" depends-on-methods="testcases.TestCarInsurance.testNavigateToCarInsurance" duration-ms="1408" status="PASS">
+        <test-method signature="testEnterPincodeAndProceed()[pri:2, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:07:56 IST" name="testEnterPincodeAndProceed" finished-at="2026-05-08T16:07:57 IST" depends-on-methods="testcases.TestCarInsurance.testNavigateToCarInsurance" duration-ms="1154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEnterPincodeAndProceed -->
-        <test-method signature="testSelectCarDetails()[pri:3, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:12 IST" name="testSelectCarDetails" finished-at="2026-05-08T11:29:16 IST" depends-on-methods="testcases.TestCarInsurance.testEnterPincodeAndProceed" duration-ms="4128" status="PASS">
+        <test-method signature="testSelectCarDetails()[pri:3, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:07:57 IST" name="testSelectCarDetails" finished-at="2026-05-08T16:08:00 IST" depends-on-methods="testcases.TestCarInsurance.testEnterPincodeAndProceed" duration-ms="3022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSelectCarDetails -->
-        <test-method signature="testReviewAndProceed()[pri:4, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:16 IST" name="testReviewAndProceed" finished-at="2026-05-08T11:29:18 IST" depends-on-methods="testcases.TestCarInsurance.testSelectCarDetails" duration-ms="2224" status="PASS">
+        <test-method signature="testReviewAndProceed()[pri:4, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:08:00 IST" name="testReviewAndProceed" finished-at="2026-05-08T16:08:02 IST" depends-on-methods="testcases.TestCarInsurance.testSelectCarDetails" duration-ms="1429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReviewAndProceed -->
-        <test-method signature="testVerifyPlansAndDetails()[pri:5, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:18 IST" name="testVerifyPlansAndDetails" finished-at="2026-05-08T11:29:23 IST" depends-on-methods="testcases.TestCarInsurance.testReviewAndProceed" duration-ms="5054" status="PASS">
+        <test-method signature="testVerifyPlansAndDetails()[pri:5, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:08:02 IST" name="testVerifyPlansAndDetails" finished-at="2026-05-08T16:08:06 IST" depends-on-methods="testcases.TestCarInsurance.testReviewAndProceed" duration-ms="3749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVerifyPlansAndDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestCarInsurance@5e17553a]" started-at="2026-05-08T11:29:23 IST" name="tearDown" finished-at="2026-05-08T11:29:30 IST" duration-ms="6598" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestCarInsurance@41005828]" started-at="2026-05-08T16:08:06 IST" name="tearDown" finished-at="2026-05-08T16:08:12 IST" duration-ms="6485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.TestCarInsurance -->
       <class name="testcases.TestComplaintFlow">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:22 IST" name="setUp" finished-at="2026-05-08T11:28:29 IST" duration-ms="7181" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:20 IST" name="setUp" finished-at="2026-05-08T16:07:30 IST" duration-ms="9944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateContactUsPage()[pri:1, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:29 IST" name="validateContactUsPage" finished-at="2026-05-08T11:28:32 IST" duration-ms="2646" status="PASS">
+        <test-method signature="validateContactUsPage()[pri:1, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:30 IST" name="validateContactUsPage" finished-at="2026-05-08T16:07:35 IST" duration-ms="5254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateContactUsPage -->
-        <test-method signature="invalidPhoneNumberTest()[pri:2, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:32 IST" name="invalidPhoneNumberTest" finished-at="2026-05-08T11:28:37 IST" duration-ms="5066" status="PASS">
+        <test-method signature="invalidPhoneNumberTest()[pri:2, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:35 IST" name="invalidPhoneNumberTest" finished-at="2026-05-08T16:07:37 IST" duration-ms="1997" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPhoneNumberTest -->
-        <test-method signature="missingPolicyIdTest()[pri:3, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:37 IST" name="missingPolicyIdTest" finished-at="2026-05-08T11:28:42 IST" duration-ms="4750" status="PASS">
+        <test-method signature="missingPolicyIdTest()[pri:3, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:37 IST" name="missingPolicyIdTest" finished-at="2026-05-08T16:07:39 IST" duration-ms="1899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- missingPolicyIdTest -->
-        <test-method signature="successfulSubmissionTest()[pri:4, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:42 IST" name="successfulSubmissionTest" finished-at="2026-05-08T11:28:46 IST" duration-ms="4354" status="PASS">
+        <test-method signature="successfulSubmissionTest()[pri:4, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:39 IST" name="successfulSubmissionTest" finished-at="2026-05-08T16:07:41 IST" duration-ms="1691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulSubmissionTest -->
-        <test-method signature="invalidEmailTest()[pri:5, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:46 IST" name="invalidEmailTest" finished-at="2026-05-08T11:28:51 IST" duration-ms="4475" status="PASS">
+        <test-method signature="invalidEmailTest()[pri:5, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:41 IST" name="invalidEmailTest" finished-at="2026-05-08T16:07:42 IST" duration-ms="1668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEmailTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestComplaintFlow@3b5fad2d]" started-at="2026-05-08T11:28:51 IST" name="tearDown" finished-at="2026-05-08T11:29:00 IST" duration-ms="9053" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestComplaintFlow@44c73c26]" started-at="2026-05-08T16:07:42 IST" name="tearDown" finished-at="2026-05-08T16:07:49 IST" duration-ms="6261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.TestComplaintFlow -->
       <class name="testcases.TestBusinessInsurance">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:29:54 IST" name="setUp" finished-at="2026-05-08T11:30:04 IST" duration-ms="10092" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:32 IST" name="setUp" finished-at="2026-05-08T16:08:40 IST" duration-ms="7470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:04 IST" name="initPages" finished-at="2026-05-08T11:30:04 IST" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:40 IST" name="initPages" finished-at="2026-05-08T16:08:40 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testWorkmenCompensationOpensInNewTab()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:04 IST" name="testWorkmenCompensationOpensInNewTab" finished-at="2026-05-08T11:30:17 IST" duration-ms="13242" status="PASS">
+        <test-method signature="testWorkmenCompensationOpensInNewTab()[pri:0, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:40 IST" name="testWorkmenCompensationOpensInNewTab" finished-at="2026-05-08T16:08:55 IST" duration-ms="15435" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5cd24316f2680dd54bc25da7f12a7618, getTitle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2478754\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53695}, goog:processID: 35712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53695/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5cd24316f2680dd54bc25da7f12a7618]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5cd24316f2680dd54bc25da7f12a7618, getTitle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2478754\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53695}, goog:processID: 35712, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53695/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5cd24316f2680dd54bc25da7f12a7618
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:305)
+at testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab(TestBusinessInsurance.java:65)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWorkmenCompensationOpensInNewTab -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:17 IST" name="initPages" finished-at="2026-05-08T11:30:17 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method signature="testSubmitWithoutDetails()[pri:1, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:17 IST" name="testSubmitWithoutDetails" finished-at="2026-05-08T11:30:20 IST" depends-on-methods="testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab" duration-ms="2680" status="PASS">
+        <test-method signature="testSubmitWithoutDetails()[pri:1, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:55 IST" name="testSubmitWithoutDetails" finished-at="2026-05-08T16:08:55 IST" depends-on-methods="testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testcases.TestBusinessInsurance.testSubmitWithoutDetails() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab() on instance testcases.TestBusinessInsurance@7fcf2fc1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testcases.TestBusinessInsurance.testSubmitWithoutDetails() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testWorkmenCompensationOpensInNewTab() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubmitWithoutDetails -->
-        <test-method signature="testValidDetailsSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:20 IST" name="testValidDetailsSubmission" data-provider="contactDetails" finished-at="2026-05-08T11:30:24 IST" depends-on-methods="testcases.TestBusinessInsurance.testSubmitWithoutDetails" duration-ms="4516" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9898989898]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abc@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ABC Constructions]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[500097]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="testValidDetailsSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:55 IST" name="testValidDetailsSubmission" finished-at="2026-05-08T16:08:55 IST" depends-on-methods="testcases.TestBusinessInsurance.testSubmitWithoutDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testcases.TestBusinessInsurance.testValidDetailsSubmission() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testSubmitWithoutDetails() on instance testcases.TestBusinessInsurance@7fcf2fc1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testcases.TestBusinessInsurance.testValidDetailsSubmission() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testSubmitWithoutDetails() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidDetailsSubmission -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:20 IST" name="initPages" finished-at="2026-05-08T11:30:20 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:24 IST" name="initPages" finished-at="2026-05-08T11:30:24 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method signature="testIndustrySelectionValidation()[pri:3, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:24 IST" name="testIndustrySelectionValidation" finished-at="2026-05-08T11:30:39 IST" depends-on-methods="testcases.TestBusinessInsurance.testValidDetailsSubmission" duration-ms="14848" status="PASS">
+        <test-method signature="testIndustrySelectionValidation()[pri:3, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:55 IST" name="testIndustrySelectionValidation" finished-at="2026-05-08T16:08:55 IST" depends-on-methods="testcases.TestBusinessInsurance.testValidDetailsSubmission" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testcases.TestBusinessInsurance.testIndustrySelectionValidation() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testValidDetailsSubmission() on instance testcases.TestBusinessInsurance@7fcf2fc1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testcases.TestBusinessInsurance.testIndustrySelectionValidation() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testValidDetailsSubmission() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIndustrySelectionValidation -->
-        <test-method signature="testWorkerDetailsAndProceed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:39 IST" name="testWorkerDetailsAndProceed" data-provider="workerDetails" finished-at="2026-05-08T11:30:54 IST" depends-on-methods="testcases.TestBusinessInsurance.testIndustrySelectionValidation" duration-ms="14297" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[20000]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[12500]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[8000]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="testWorkerDetailsAndProceed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:55 IST" name="testWorkerDetailsAndProceed" finished-at="2026-05-08T16:08:55 IST" depends-on-methods="testcases.TestBusinessInsurance.testIndustrySelectionValidation" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testcases.TestBusinessInsurance.testWorkerDetailsAndProceed() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testIndustrySelectionValidation() on instance testcases.TestBusinessInsurance@7fcf2fc1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testcases.TestBusinessInsurance.testWorkerDetailsAndProceed() on instance testcases.TestBusinessInsurance@7fcf2fc1 depends on not successfully finished methods 
+[testcases.TestBusinessInsurance.testIndustrySelectionValidation() on instance testcases.TestBusinessInsurance@7fcf2fc1]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWorkerDetailsAndProceed -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:39 IST" name="initPages" finished-at="2026-05-08T11:30:39 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestBusinessInsurance@56dc1551]" started-at="2026-05-08T11:30:54 IST" name="tearDown" finished-at="2026-05-08T11:31:03 IST" duration-ms="8933" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestBusinessInsurance@7fcf2fc1]" started-at="2026-05-08T16:08:55 IST" name="tearDown" finished-at="2026-05-08T16:09:01 IST" duration-ms="6035" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.TestBusinessInsurance -->
       <class name="testcases.TestHealthInsurance">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:21 IST" name="setUp" finished-at="2026-05-08T11:27:30 IST" duration-ms="8953" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:35 IST" name="setUp" finished-at="2026-05-08T16:06:42 IST" duration-ms="7108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:30 IST" name="initPages" finished-at="2026-05-08T11:27:30 IST" duration-ms="40" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:42 IST" name="initPages" finished-at="2026-05-08T16:06:42 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testWithoutSelectingAnyMember(java.lang.String)[pri:0, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:30 IST" name="testWithoutSelectingAnyMember" data-provider="noMemberSelectedData" finished-at="2026-05-08T11:27:34 IST" duration-ms="3495" status="PASS">
+        <test-method signature="testWithoutSelectingAnyMember(java.lang.String)[pri:0, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:42 IST" name="testWithoutSelectingAnyMember" data-provider="noMemberSelectedData" finished-at="2026-05-08T16:06:45 IST" duration-ms="2498" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -194,7 +307,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWithoutSelectingAnyMember -->
-        <test-method signature="testCoupleChildrenAgeGapLess18(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:34 IST" name="testCoupleChildrenAgeGapLess18" data-provider="ageGapInvalidData" finished-at="2026-05-08T11:27:41 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutSelectingAnyMember" duration-ms="7120" status="PASS">
+        <test-method signature="testCoupleChildrenAgeGapLess18(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:45 IST" name="testCoupleChildrenAgeGapLess18" data-provider="ageGapInvalidData" finished-at="2026-05-08T16:06:50 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutSelectingAnyMember" duration-ms="4976" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -235,7 +348,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCoupleChildrenAgeGapLess18 -->
-        <test-method signature="testWithoutPinCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:42 IST" name="testWithoutPinCode" data-provider="invalidPincodeData" finished-at="2026-05-08T11:27:45 IST" depends-on-methods="testcases.TestHealthInsurance.testCoupleChildrenAgeGapLess18" duration-ms="3465" status="PASS">
+        <test-method signature="testWithoutPinCode(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:50 IST" name="testWithoutPinCode" data-provider="invalidPincodeData" finished-at="2026-05-08T16:06:52 IST" depends-on-methods="testcases.TestHealthInsurance.testCoupleChildrenAgeGapLess18" duration-ms="1809" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -291,7 +404,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWithoutPinCode -->
-        <test-method signature="testEditMemberDetailsButton(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:45 IST" name="testEditMemberDetailsButton" data-provider="editMemberData" finished-at="2026-05-08T11:27:48 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutPinCode" duration-ms="3128" status="PASS">
+        <test-method signature="testEditMemberDetailsButton(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:52 IST" name="testEditMemberDetailsButton" data-provider="editMemberData" finished-at="2026-05-08T16:06:53 IST" depends-on-methods="testcases.TestHealthInsurance.testWithoutPinCode" duration-ms="1191" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -347,7 +460,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEditMemberDetailsButton -->
-        <test-method signature="testHealthInsurance(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:27:48 IST" name="testHealthInsurance" data-provider="validInsuranceData" finished-at="2026-05-08T11:28:14 IST" depends-on-methods="testcases.TestHealthInsurance.testEditMemberDetailsButton" duration-ms="25850" status="PASS">
+        <test-method signature="testHealthInsurance(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:06:53 IST" name="testHealthInsurance" data-provider="validInsuranceData" finished-at="2026-05-08T16:07:12 IST" depends-on-methods="testcases.TestHealthInsurance.testEditMemberDetailsButton" duration-ms="18636" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -398,57 +511,57 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHealthInsurance -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestHealthInsurance@4b2c5e02]" started-at="2026-05-08T11:28:14 IST" name="tearDown" finished-at="2026-05-08T11:28:22 IST" duration-ms="7977" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestHealthInsurance@71e693fa]" started-at="2026-05-08T16:07:12 IST" name="tearDown" finished-at="2026-05-08T16:07:20 IST" duration-ms="7975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.TestHealthInsurance -->
       <class name="testcases.TestBikeInsurance">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:30 IST" name="setUp" finished-at="2026-05-08T11:29:38 IST" duration-ms="8049" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:12 IST" name="setUp" finished-at="2026-05-08T16:08:18 IST" duration-ms="6297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:38 IST" name="initPages" finished-at="2026-05-08T11:29:38 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:18 IST" name="initPages" finished-at="2026-05-08T16:08:18 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="testNavigationToBikeSection()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:38 IST" name="testNavigationToBikeSection" finished-at="2026-05-08T11:29:39 IST" duration-ms="724" status="PASS">
+        <test-method signature="testNavigationToBikeSection()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:18 IST" name="testNavigationToBikeSection" finished-at="2026-05-08T16:08:19 IST" duration-ms="722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNavigationToBikeSection -->
-        <test-method signature="testRegistrationErrorValidation()[pri:1, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:39 IST" name="testRegistrationErrorValidation" finished-at="2026-05-08T11:29:41 IST" depends-on-methods="testcases.TestBikeInsurance.testNavigationToBikeSection" duration-ms="2367" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:19 IST" name="initPages" finished-at="2026-05-08T16:08:19 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="testRegistrationErrorValidation()[pri:1, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:19 IST" name="testRegistrationErrorValidation" finished-at="2026-05-08T16:08:21 IST" depends-on-methods="testcases.TestBikeInsurance.testNavigationToBikeSection" duration-ms="2187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRegistrationErrorValidation -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:39 IST" name="initPages" finished-at="2026-05-08T11:29:39 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:21 IST" name="initPages" finished-at="2026-05-08T16:08:21 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:41 IST" name="initPages" finished-at="2026-05-08T11:29:41 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method signature="testVehicleManualSelection()[pri:2, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:41 IST" name="testVehicleManualSelection" finished-at="2026-05-08T11:29:43 IST" depends-on-methods="testcases.TestBikeInsurance.testRegistrationErrorValidation" duration-ms="2303" status="PASS">
+        <test-method signature="testVehicleManualSelection()[pri:2, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:21 IST" name="testVehicleManualSelection" finished-at="2026-05-08T16:08:23 IST" depends-on-methods="testcases.TestBikeInsurance.testRegistrationErrorValidation" duration-ms="1488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVehicleManualSelection -->
-        <test-method signature="testResultsPageAndPlanCount()[pri:3, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:43 IST" name="testResultsPageAndPlanCount" finished-at="2026-05-08T11:29:47 IST" depends-on-methods="testcases.TestBikeInsurance.testVehicleManualSelection" duration-ms="4093" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:23 IST" name="initPages" finished-at="2026-05-08T16:08:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="testResultsPageAndPlanCount()[pri:3, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:23 IST" name="testResultsPageAndPlanCount" finished-at="2026-05-08T16:08:26 IST" depends-on-methods="testcases.TestBikeInsurance.testVehicleManualSelection" duration-ms="3224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResultsPageAndPlanCount -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:43 IST" name="initPages" finished-at="2026-05-08T11:29:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:48 IST" name="initPages" finished-at="2026-05-08T11:29:48 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method signature="testTriggerPlanDetailsOverlay()[pri:4, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:48 IST" name="testTriggerPlanDetailsOverlay" finished-at="2026-05-08T11:29:48 IST" depends-on-methods="testcases.TestBikeInsurance.testResultsPageAndPlanCount" duration-ms="107" status="PASS">
+        <test-method signature="testTriggerPlanDetailsOverlay()[pri:4, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:26 IST" name="testTriggerPlanDetailsOverlay" finished-at="2026-05-08T16:08:26 IST" depends-on-methods="testcases.TestBikeInsurance.testResultsPageAndPlanCount" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTriggerPlanDetailsOverlay -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestBikeInsurance@3eb91815]" started-at="2026-05-08T11:29:48 IST" name="tearDown" finished-at="2026-05-08T11:29:54 IST" duration-ms="6086" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:26 IST" name="initPages" finished-at="2026-05-08T16:08:26 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TestBikeInsurance@60b4beb4]" started-at="2026-05-08T16:08:26 IST" name="tearDown" finished-at="2026-05-08T16:08:32 IST" duration-ms="5748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
